@@ -63,3 +63,4 @@ wget https://ambermd.org/downloads/AmberTools17.tar.bz2
 - [AT19] https://github.com/GoHypernet/Galileo-AmberTools-Framework
 - [AT22I1] https://prof.uok.ac.ir/m.irani/index_files/Page312.htm
 - [AT22I2] https://www.hull1.com/linux/2022/10/20/compile-amber22.html
+- [TU1] https://amber.tkanai-lab.org/ (Japanese)
