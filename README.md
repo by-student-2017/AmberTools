@@ -66,6 +66,12 @@ wget https://ambermd.org/downloads/AmberTools-1.5.tar.bz2
 ```
 
 
+## sci-AmberTools
+```
+https://gitweb-cdn-origin.gentoo.org/proj/sci.git/snapshot/sci-ambertools.tar.bz2
+```
+
+
 # References
 - [AT24] https://github.com/conda-forge/ambertools-feedstock/issues/135
 - [AT23] https://github.com/conda-forge/ambertools-feedstock/issues/97
@@ -73,6 +79,7 @@ wget https://ambermd.org/downloads/AmberTools-1.5.tar.bz2
 - [AT21] http://archive.ambermd.org/202305/0106.html
 - [AT20] https://github.com/GoHypernet/Galileo-AmberTools-Framework
 - [AT19] https://github.com/GoHypernet/Galileo-AmberTools-Framework
+- [ATXX] https://gitweb-cdn-origin.gentoo.org/proj/sci.git/commit/profiles?h=ambertools
 - [AT22I1] https://prof.uok.ac.ir/m.irani/index_files/Page312.htm
 - [AT22I2] https://www.hull1.com/linux/2022/10/20/compile-amber22.html
 - [AT13I1] http://jswails.wikidot.com/installing-amber12-and-ambertools-13
