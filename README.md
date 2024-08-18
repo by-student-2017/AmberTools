@@ -85,4 +85,5 @@ wget https://gitweb-cdn-origin.gentoo.org/proj/sci.git/snapshot/sci-ambertools.t
 - [AT13I1] http://jswails.wikidot.com/installing-amber12-and-ambertools-13
 - [AT18I1] https://winmostar.com/en/gmx4wm_en_linux.html (./configure -noX11 --skip-python gnu)
 - [AT17I1] https://www.computabio.com/compilation-tutorial-of-ambertools17-under-windows.html (export AMBERHOME='pwd'; ./configure-cygwin-noX11 gnu; source amber.sh; make install)
+- [AT15I1] https://topic.alibabacloud.com/a/summary-of-accelerated-installation-of-amber11--ambertools15--cuda_1_16_32529945.html
 - [TU1] https://amber.tkanai-lab.org/ (Japanese)
