@@ -54,6 +54,12 @@ wget https://ambermd.org/downloads/AmberTools17.tar.bz2
 ```
 
 
+## AmberTools13
+```
+wget https://ambermd.org/downloads/AmberTools13.tar.bz2
+```
+
+
 # References
 - [AT24] https://github.com/conda-forge/ambertools-feedstock/issues/135
 - [AT23] https://github.com/conda-forge/ambertools-feedstock/issues/97
