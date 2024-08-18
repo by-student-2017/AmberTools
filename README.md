@@ -91,6 +91,7 @@ pinda install ambertools 18
 - [AT22I2] https://www.hull1.com/linux/2022/10/20/compile-amber22.html
 - [AT20I1] https://www.programmersought.com/article/70808542288/
 - [AT20I2] https://www.kitasato-u.ac.jp/sci/resea/buturi/seitai/matsui/memo.html (Japanese)
+- [AT20I3] https://biomodeling.co.jp/2020/05/31/%e5%88%86%e5%ad%90%e3%82%b7%e3%83%9f%e3%83%a5%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e7%92%b0%e5%a2%83%e8%a8%ad%e5%ae%9a/ (Japanese)
 - [AT13I1] http://jswails.wikidot.com/installing-amber12-and-ambertools-13
 - [AT18I1] https://winmostar.com/en/gmx4wm_en_linux.html (./configure -noX11 --skip-python gnu)
 - [AT17I1] https://www.computabio.com/compilation-tutorial-of-ambertools17-under-windows.html (export AMBERHOME='pwd'; ./configure-cygwin-noX11 gnu; source amber.sh; make install)
