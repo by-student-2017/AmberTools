@@ -72,6 +72,12 @@ wget https://gitweb-cdn-origin.gentoo.org/proj/sci.git/snapshot/sci-ambertools.t
 ```
 
 
+## Pinda [AT18Pinda]
+```
+pip install pinda
+pinda install ambertools 18
+```
+
 # References
 - [AT24] https://github.com/conda-forge/ambertools-feedstock/issues/135
 - [AT23] https://github.com/conda-forge/ambertools-feedstock/issues/97
@@ -79,6 +85,7 @@ wget https://gitweb-cdn-origin.gentoo.org/proj/sci.git/snapshot/sci-ambertools.t
 - [AT21] http://archive.ambermd.org/202305/0106.html
 - [AT20] https://github.com/GoHypernet/Galileo-AmberTools-Framework
 - [AT19] https://github.com/GoHypernet/Galileo-AmberTools-Framework
+- [AT18Pinda] https://pypi.org/project/pinda/
 - [ATXX] https://gitweb-cdn-origin.gentoo.org/proj/sci.git/commit/profiles?h=ambertools
 - [AT22I1] https://prof.uok.ac.ir/m.irani/index_files/Page312.htm
 - [AT22I2] https://www.hull1.com/linux/2022/10/20/compile-amber22.html
