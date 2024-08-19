@@ -62,6 +62,34 @@ make test
 ```
 wget https://ambermd.org/downloads/AmberTools20jlmrcc.tar.bz2
 ```
+### AmberTools20 (amber20), Installation (WSL2, ubuntu 22.04, failed)
+```
+tar xvf AmberTools20jlmrcc.tar.bz2
+cd amber20_src/build
+AMBERHOME=$(dirname $(dirname `pwd`))
+cmake $AMBERHOME/amber20_src -DCMAKE_INSTALL_PREFIX=$AMBERHOME/amber22 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=FALSE -DBUILD_GUI=FALSE -DCUDA=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DDOWNLOAD_MINICONDA=FALSE -DBUILD_PYTHON=FALSE -Wno-dev
+#source $AMBERHOME/amber20/amber.sh
+make -j8
+make install
+
+#export PATH=$AMBERHOME/amber20/bin:$PATH
+#make test
+```
+### AmberTools20 (amber20), Installation (WSL2, ubuntu 22.04, failed)
+```
+tar xvf AmberTools20jlmrcc.tar.bz2
+cd amber20_src
+export AMBERHOME=`pwd`
+export LOCALFLAGS="-lgfortran -std=legacy"
+export GOTO="/usr/lib/x86_64-linux-gnu/libopenblas.a"
+echo "Y" | ./configure -noX11 --skip-python gnu
+source $AMBERHOME/amber.sh
+make -j8
+make install
+
+export PATH=$AMBERHOME/bin:$PATH
+make test
+```
 ### AmberTools20 (amber20), Installation (cygwin, failed)
 ```
 tar xvf AmberTools20jlmrcc.tar.bz2
