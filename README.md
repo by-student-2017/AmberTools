@@ -207,3 +207,5 @@ libssl-devel 3.0.14-1
 - [ATT1] https://amber.tkanai-lab.org/TutorialB4/index.htm, https://www.tkanai-lab.org/wp/wp-content/uploads/2017/09/antechmber-jp.pdf (Japanese)
 - [ATT2] https://oosakik.hatenablog.com/entry/2019/11/19/144858
 - [acpype] https://github.com/alanwilter/acpype
+- [WC1] http://jswails.wikidot.com/windows-cygwin
+- [CWM1] https://github.com/X-Ability/CygwinWM/
