@@ -118,7 +118,6 @@ tar xvf AmberTools17.tar.bz2
 cd amber16
 export AMBERHOME=`pwd`
 export LOCALFLAGS="-lgfortran -std=legacy"
-export GOTO="-L/usr/bin -lcygblas-0"
 echo "N" | ./configure -cygwin -noX11 --skip-python gnu
 source $AMBERHOME/amber.sh
 sed -i "s/FREEFORMAT_FLAG/#FREEFORMAT_FLAG/g" $AMBERHOME/AmberTools/src/config.h
@@ -135,6 +134,7 @@ make test
 - Note: multiple definition of `cifpin': cifparse.c and lex.cif.c -> (lex.cif.c: Line 327, /*FILE *cifpin = NULL,*/ FILE *cifpout = NULL;)
 - Note: Openblas is fully compatible with Netlib BLAS. (https://cygwin.com/pipermail/cygwin-announce/2024-January/011501.html)
 - Note: usr/bin/cygblas-0.dll (dynamic library) (https://cygwin.com/cygwin/packages/summary/libopenblas.html)
+- Note: Failed: export GOTO="-L/usr/bin -lcygblas-0"
 
 
 ## AmberTools13 (amber12)
