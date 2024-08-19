@@ -25,7 +25,26 @@ wget https://ambermd.org/downloads/AmberTools22jlmrcc.tar.bz2
 ### AmberTools22 (amber22), Installation (cygwin, failed)
 ```
 tar xvf AmberTools22jlmrcc.tar.bz2
-cd amber22_src
+cd amber22_src/build
+AMBERHOME=$(dirname $(dirname `pwd`))
+cmake $AMBERHOME/amber22_src -DCMAKE_INSTALL_PREFIX=$AMBERHOME/amber22 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=FALSE -DBUILD_GUI=FALSE -DCUDA=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DDOWNLOAD_MINICONDA=FALSE -DBUILD_PYTHON=FALSE -Wno-dev
+#source $AMBERHOME/amber22/amber.sh
+make -j8
+make install
+
+#export PATH=$AMBERHOME/amber22/bin:$PATH
+#make test
+```
+
+
+## AmberTools21 [AT21]
+```
+wget https://ambermd.org/downloads/AmberTools21jlmrcc.tar.bz2
+```
+### AmberTools21 (amber20), Installation (cygwin, failed)
+```
+tar xvf AmberTools21jlmrcc.tar.bz2
+cd amber20_src
 export AMBERHOME=`pwd`
 export LOCALFLAGS="-lgfortran -std=legacy"
 #export CUSTOMBUILDFLAGS="-fallow-argument-mismatch"
@@ -36,25 +55,6 @@ make install
 
 export PATH=$AMBERHOME/bin:$PATH
 make test
-```
-
-
-## AmberTools21 [AT21]
-```
-wget https://ambermd.org/downloads/AmberTools21jlmrcc.tar.bz2
-```
-### AmberTools21 (amber22), Installation (cygwin, failed)
-```
-tar xvf AmberTools22jlmrcc.tar.bz2
-cd amber22_src/build
-AMBERHOME=$(dirname $(dirname `pwd`))
-cmake $AMBERHOME/amber22_src -DCMAKE_INSTALL_PREFIX=$AMBERHOME/amber22 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=FALSE -DBUILD_GUI=FALSE -DCUDA=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DDOWNLOAD_MINICONDA=FALSE -DBUILD_PYTHON=FALSE -Wno-dev
-#source $AMBERHOME/amber22/amber.sh
-make -j8
-make install
-
-#export PATH=$AMBERHOME/amber22/bin:$PATH
-#make test
 ```
 
 
