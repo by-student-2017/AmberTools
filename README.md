@@ -118,7 +118,7 @@ tar xvf AmberTools17.tar.bz2
 cd amber16
 export AMBERHOME=`pwd`
 export LOCALFLAGS="-lgfortran -std=legacy"
-export CUSTOMBUILDFLAGS="-fallow-argument-mismatch"
+#export CUSTOMBUILDFLAGS="-fallow-argument-mismatch"
 echo "N" | ./configure -cygwin -noX11 --skip-python gnu
 source $AMBERHOME/amber.sh
 sed -i "s/FREEFORMAT_FLAG/#FREEFORMAT_FLAG/g" $AMBERHOME/AmberTools/src/config.h
