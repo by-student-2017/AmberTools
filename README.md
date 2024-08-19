@@ -118,7 +118,7 @@ tar xvf AmberTools17.tar.bz2
 cd amber16
 export AMBERHOME=`pwd`
 export LOCALFLAGS="-lgfortran -std=legacy"
-echo "N" | ./configure -cygwin -noX11 --skip-python gnu
+echo "N" | ./configure -cygwin -noX11 --skip-python -nosanderapi gnu
 source $AMBERHOME/amber.sh
 sed -i "s/FREEFORMAT_FLAG/#FREEFORMAT_FLAG/g" $AMBERHOME/AmberTools/src/config.h
 make -j8
@@ -140,6 +140,7 @@ make test
 - Note: Failed: export GOTO="-L/usr/bin -lcygblas-0"
 - Note: /AmberTools/src/sqm/qm2_scf.F90:2271:48:(Line 2265 & 2271) Error: Rank mismatch between actual argument at (1) and actual argument at (2) (scalar and rank-1): Line 2252 => _REAL_ :: twork(1)  ! Declare twork as an array with at least one element
 - Note: /AmberTools/src/sander/sebomd_module.F90:124:34: Error: Symbol ‘hamiltonian’ in namelist ‘sebomd’ at (1) must be declared before the namelist is declared. (In subroutine read_sebomd_namelist(), the namelist follows the type declaration.)
+- Note: Plumed_init.inc:8:44: Error: Type mismatch between actual argument at (1) and actual argument at (2) (REAL(8)/INTEGER(4)). etc
 
 
 ## AmberTools13 (amber12)
