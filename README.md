@@ -135,7 +135,7 @@ make test
 - Note: Openblas is fully compatible with Netlib BLAS. (https://cygwin.com/pipermail/cygwin-announce/2024-January/011501.html)
 - Note: usr/bin/cygblas-0.dll (dynamic library) (https://cygwin.com/cygwin/packages/summary/libopenblas.html)
 - Note: Failed: export GOTO="-L/usr/bin -lcygblas-0"
-- Note: qm2_scf.F90:2271:48:(Line 2265 & 2271) Error: Rank mismatch between actual argument at (1) and actual argument at (2) (scalar and rank-1)
+- Note: /AmberTools/src/sqm/qm2_scf.F90:2271:48:(Line 2265 & 2271) Error: Rank mismatch between actual argument at (1) and actual argument at (2) (scalar and rank-1): Line 2252 => _REAL_ :: twork(1)  ! Declare twork as an array with at least one element
 
 
 ## AmberTools13 (amber12)
