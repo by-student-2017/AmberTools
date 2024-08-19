@@ -42,6 +42,7 @@ export AMBERHOME=`pwd`
 export LOCALFLAGS="-lgfortran -std=legacy"
 ./configure -cygwin -noX11 --skip-python gnu
 N
+source $AMBERHOME/amber.sh
 make install
 
 export PATH=$AMBERHOME/bin:$PATH
