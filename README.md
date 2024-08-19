@@ -130,6 +130,7 @@ make test
 ```
 - Note (error): $AMBERHOME/AmberTools/src/lib/nxtsec.F
 - Note (F77 -> F90): perl f2f.pl --tab 2 --base-indent 0 *.F *.F90
+- Note: multiple definition of `cifpin': cifparse.c and lex.cif.c
 
 
 ## AmberTools13 (amber12)
