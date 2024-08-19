@@ -251,6 +251,13 @@ pip install pinda
 pinda install ambertools 18
 ```
 
+## Ubuntu 22.04 LTS
+```
+sudo apt update
+sudo apt -y install tcsh make gcc gfortran flex bison patch bc wget xorg-dev libz-dev libbz2-dev libopenblas-dev
+sudo apt -y install openmpi-bin libopenmpi-dev openssh-client python3-mpi4py
+```
+
 
 ## cygwin
 ```
