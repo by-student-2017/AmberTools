@@ -37,12 +37,11 @@ wget https://ambermd.org/downloads/AmberTools20jlmrcc.tar.bz2
 ### AmberTools20 (amber20), Installation (cygwin, failed)
 ```
 tar xvf AmberTools20jlmrcc.tar.bz2
-cd amber20
+cd amber20_src
 export AMBERHOME=`pwd`
 export LOCALFLAGS="-lgfortran -std=legacy"
 ./configure -cygwin -noX11 --skip-python gnu
 N
-source $AMBERHOME/amber.sh
 make install
 
 export PATH=$AMBERHOME/bin:$PATH
