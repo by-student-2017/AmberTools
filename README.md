@@ -249,3 +249,5 @@ libssl-devel 3.0.14-1
 - [acpype] https://github.com/alanwilter/acpype
 - [WC1] http://jswails.wikidot.com/windows-cygwin
 - [CWM1] https://github.com/X-Ability/CygwinWM/
+- [f2f.pl] https://github.com/mgaitan/f2f_online/blob/master/lib/f2f.pl
+- [f2f.pl] https://github.com/senooken/example/tree/master/Fortran/f77tof90/f2f
