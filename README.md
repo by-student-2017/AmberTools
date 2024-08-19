@@ -64,7 +64,7 @@ wget https://ambermd.org/downloads/AmberTools13.tar.bz2
 ```
 wget https://ambermd.org/downloads/AmberTools-1.5.tar.bz2
 ```
-### Installation (failed)
+### Installation (cygwin, failed)
 ```
 tar xvf AmberTools-1.5.tar.bz2
 cd amber11/AmberTools/src
