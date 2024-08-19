@@ -118,7 +118,7 @@ tar xvf AmberTools17.tar.bz2
 cd amber16
 export AMBERHOME=`pwd`
 export LOCALFLAGS="-lgfortran -std=legacy"
-export GOTO="-L/usr/lib -lcygblas-0"
+export GOTO="-L/usr/bin -lcygblas-0"
 echo "N" | ./configure -cygwin -noX11 --skip-python gnu
 source $AMBERHOME/amber.sh
 sed -i "s/FREEFORMAT_FLAG/#FREEFORMAT_FLAG/g" $AMBERHOME/AmberTools/src/config.h
