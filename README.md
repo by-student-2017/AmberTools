@@ -58,6 +58,15 @@ wget https://ambermd.org/downloads/AmberTools17.tar.bz2
 ```
 wget https://ambermd.org/downloads/AmberTools13.tar.bz2
 ```
+### Installation (cygwin, failed)
+```
+tar xvf AmberTools13.tar.bz2
+cd amber12
+export AMBERHOME=`pwd`
+export LOCALFLAGS="-lgfortran -std=legacy"
+./configure -cygwin -noX11 -nobintraj -nomtkpp -noamber -norism -nofftw3 gnu
+make install
+```
 
 
 ## AmberTools-1.5 (amber11)
