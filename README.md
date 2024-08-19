@@ -46,6 +46,17 @@ wget https://ambermd.org/downloads/AmberTools19.tar.bz2
 ```
 wget https://ambermd.org/downloads/AmberTools18.tar.bz2
 ```
+### AmberTools18 (amber18), Installation (cygwin, failed)
+```
+tar xvf AmberTools18.tar.bz2
+cd amber18
+export AMBERHOME=`pwd`
+export LOCALFLAGS="-lgfortran -std=legacy"
+./configure -cygwin -noX11 --skip-python gnu
+N
+source $AMBERHOME/amber.sh
+make install
+```
 
 
 ## AmberTools17 (amber16)
