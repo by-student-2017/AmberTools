@@ -66,7 +66,7 @@ wget https://ambermd.org/downloads/AmberTools-1.5.tar.bz2
 ```
 
 
-## sci-AmberTools
+## sci-AmberTools (sci-ambertools)
 ```
 wget https://gitweb-cdn-origin.gentoo.org/proj/sci.git/snapshot/sci-ambertools.tar.bz2
 ```
