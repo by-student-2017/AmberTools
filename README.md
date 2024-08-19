@@ -120,8 +120,8 @@ export AMBERHOME=`pwd`
 export LOCALFLAGS="-lgfortran -std=legacy"
 export CUSTOMBUILDFLAGS="-fallow-argument-mismatch"
 echo "N" | ./configure -cygwin -noX11 --skip-python gnu
-perl f2f.pl --tab 2 --base-indent 0 $AMBERHOME/AmberTools/src/lib/*.F $AMBERHOME/AmberTools/src/lib/*.F90
 source $AMBERHOME/amber.sh
+sed -i "s/FREEFORMAT_FLAG/#FREEFORMAT_FLAG/g" $AMBERHOME/AmberTools/src/config.h
 make -j8
 make install
 
