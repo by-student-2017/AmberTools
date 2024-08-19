@@ -139,6 +139,7 @@ make test
 - Note: usr/bin/cygblas-0.dll (dynamic library) (https://cygwin.com/cygwin/packages/summary/libopenblas.html)
 - Note: Failed: export GOTO="-L/usr/bin -lcygblas-0"
 - Note: /AmberTools/src/sqm/qm2_scf.F90:2271:48:(Line 2265 & 2271) Error: Rank mismatch between actual argument at (1) and actual argument at (2) (scalar and rank-1): Line 2252 => _REAL_ :: twork(1)  ! Declare twork as an array with at least one element
+- Note: /AmberTools/src/sander/sebomd_module.F90:124:34: Error: Symbol ‘hamiltonian’ in namelist ‘sebomd’ at (1) must be declared before the namelist is declared. (In subroutine read_sebomd_namelist(), the namelist follows the type declaration.)
 
 
 ## AmberTools13 (amber12)
