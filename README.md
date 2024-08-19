@@ -118,8 +118,9 @@ tar xvf AmberTools17.tar.bz2
 cd amber16
 export AMBERHOME=`pwd`
 export LOCALFLAGS="-lgfortran -std=legacy"
-export CUSTOMBUILDFLAGS="-fallow-argument-mismatch -w -lgfortran -std=legacy"
+export CUSTOMBUILDFLAGS="-fallow-argument-mismatch"
 echo "N" | ./configure -cygwin -noX11 --skip-python gnu
+perl f2f.pl --tab 2 --base-indent 0 $AMBERHOME/AmberTools/src/lib/*.F $AMBERHOME/AmberTools/src/lib/*.F90
 source $AMBERHOME/amber.sh
 make -j8
 make install
@@ -127,6 +128,8 @@ make install
 export PATH=$AMBERHOME/bin:$PATH
 make test
 ```
+- Note (error): $AMBERHOME/AmberTools/src/lib/nxtsec.F
+- Note (F77 -> F90): perl f2f.pl --tab 2 --base-indent 0 *.F *.F90
 
 
 ## AmberTools13 (amber12)
