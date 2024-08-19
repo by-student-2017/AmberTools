@@ -64,7 +64,7 @@ tar xvf AmberTools13.tar.bz2
 cd amber12
 export AMBERHOME=`pwd`
 export LOCALFLAGS="-lgfortran -std=legacy"
-./configure -cygwin -noX11 -nobintraj -nomtkpp -noamber -norism -nofftw3 gnu
+./configure -cygwin -noX11 gnu
 make install
 ```
 
@@ -95,6 +95,45 @@ wget https://gitweb-cdn-origin.gentoo.org/proj/sci.git/snapshot/sci-ambertools.t
 pip install pinda
 pinda install ambertools 18
 ```
+
+
+## cygwin
+```
+gcc-fortran 12.4.0-3
+libopenblas 0.3.25-1
+liblapack-devel 3.12.0-1
+libarpack-devel 3.9.1-1
+libfftw3-devel 3.3.10-1
+make 4.4.1-2
+cmake 3.28.3-1
+patch 2.7.6-17
+wget 1.24.5-1
+gcc-g++ 12.4.0-3
+python3-devel 3.9.16-1
+tcsh 6.24.10-1
+flex 2.6.4-2
+bison 3.8.2-1
+bc 1.07.1-1
+xorg-server-devel 21.1.12-1
+zlib-devel 1.3.1-1
+libbz2-devel 1.0.8-1
+libopenmpi-devel 4.1.6-1
+openssh 9.8p1-1
+libXext-devel 1.3.6-1
+perl 5.36.3-1
+perl-ExtUtils-MakeMaker 7.70-1
+util-linux 2.39.3-2
+bzip2 1.0.8-1
+libzip2 0.11.2-2
+libtool 2.4.7-1
+gzip 1.13-1
+libboost-devel 1.66.0-1
+tar 1.35-2
+libc++-devel 8.0.1-1
+libgfortran5 1.2.4.0-3
+libssl-devel 3.0.14-1
+```
+
 
 # References
 - [AT24] https://github.com/conda-forge/ambertools-feedstock/issues/135
