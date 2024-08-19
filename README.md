@@ -64,6 +64,15 @@ wget https://ambermd.org/downloads/AmberTools13.tar.bz2
 ```
 wget https://ambermd.org/downloads/AmberTools-1.5.tar.bz2
 ```
+### Installation (failed)
+```
+tar xvf AmberTools-1.5.tar.bz2
+cd amber11/AmberTools/src
+export AMBERHOME=$HOME/amber11
+export LOCALFLAGS="-lgfortran -std=legacy"
+./configure -nopython -nobintraj -nosleap -nocpptraj -nomtkpp -bit64 -cygwin -noX11 gnu
+make install
+```
 
 
 ## sci-AmberTools (sci-ambertools)
