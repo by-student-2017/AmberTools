@@ -118,8 +118,8 @@ tar xvf AmberTools17.tar.bz2
 cd amber16
 export AMBERHOME=`pwd`
 export LOCALFLAGS="-lgfortran -std=legacy"
-export GOTO="/usr/lib/liblapack.a"
-echo "N" | ./configure -cygwin -noX11 --skip-python gnu --with-netcdf /usr/lib/libnetcdf.dll.a
+export GOTO="/usr/lib/libblas.a"
+echo "N" | ./configure -cygwin -noX11 --skip-python gnu
 source $AMBERHOME/amber.sh
 sed -i "s/FREEFORMAT_FLAG/#FREEFORMAT_FLAG/g" $AMBERHOME/AmberTools/src/config.h
 sed -i "s/FILE \*cifpin = NULL,/\/*FILE \*cifpin = NULL,*\/ FILE/g" $AMBERHOME/AmberTools/src/cifparse/lex.cif.c
@@ -132,6 +132,7 @@ make test
 - Note (error): $AMBERHOME/AmberTools/src/lib/nxtsec.F
 - Note (F77 -> F90): perl f2f.pl --tab 2 --base-indent 0 *.F *.F90
 - Note: multiple definition of `cifpin': cifparse.c and lex.cif.c -> (lex.cif.c: Line 327, /*FILE *cifpin = NULL,*/ FILE *cifpout = NULL;)
+- Note: Openblas is fully compatible with Netlib BLAS. (https://cygwin.com/pipermail/cygwin-announce/2024-January/011501.html)
 
 
 ## AmberTools13 (amber12)
