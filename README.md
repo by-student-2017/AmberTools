@@ -57,8 +57,10 @@ wget https://ambermd.org/downloads/AmberTools17.tar.bz2
 tar xvf AmberTools17.tar.bz2
 cd amber16
 export AMBERHOME=`pwd`
-FC="gfortran -lgfortran -std=legacy" ./configure -cygwin -noX11 -noemil -norism -nofftw3 -nosanderapi --skip-python gnu
+export LOCALFLAGS="-lgfortran -std=legacy"
+./configure -cygwin -noX11 --skip-python gnu
 N
+source $HOME/amber16/amber.sh
 make install
 ```
 
