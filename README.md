@@ -34,10 +34,10 @@ tar xvf AmberTools21jlmrcc.tar.bz2
 cd amber20_src
 export AMBERHOME=`pwd`
 export LOCALFLAGS="-lgfortran -std=legacy"
-export CUSTOMFLAGS="-fallow-argument-mismatch"
+export CUSTOMBUILDFLAGS="-fallow-argument-mismatch -w"
 echo "N" | ./configure -cygwin -noX11 --skip-python gnu
-N
 source $AMBERHOME/amber.sh
+make -j8
 make install
 
 export PATH=$AMBERHOME/bin:$PATH
@@ -55,10 +55,10 @@ tar xvf AmberTools20jlmrcc.tar.bz2
 cd amber20_src
 export AMBERHOME=`pwd`
 export LOCALFLAGS="-lgfortran -std=legacy"
-export CUSTOMFLAGS="-fallow-argument-mismatch"
+export CUSTOMBUILDFLAGS="-fallow-argument-mismatch -w"
 echo "N" | ./configure -cygwin -noX11 --skip-python gnu
-N
 source $AMBERHOME/amber.sh
+make -j8
 make install
 
 export PATH=$AMBERHOME/bin:$PATH
@@ -76,10 +76,10 @@ tar xvf AmberTools19.tar.bz2
 cd amber18
 export AMBERHOME=`pwd`
 export LOCALFLAGS="-lgfortran -std=legacy"
-export CUSTOMFLAGS="-fallow-argument-mismatch"
+export CUSTOMBUILDFLAGS="-fallow-argument-mismatch -w"
 echo "N" | ./configure -cygwin -noX11 --skip-python gnu
-N
 source $AMBERHOME/amber.sh
+make -j8
 make install
 
 export PATH=$AMBERHOME/bin:$PATH
@@ -97,10 +97,10 @@ tar xvf AmberTools18.tar.bz2
 cd amber18
 export AMBERHOME=`pwd`
 export LOCALFLAGS="-lgfortran -std=legacy"
-export CUSTOMFLAGS="-fallow-argument-mismatch"
+export CUSTOMBUILDFLAGS="-fallow-argument-mismatch -w"
 echo "N" | ./configure -cygwin -noX11 --skip-python gnu
-N
 source $AMBERHOME/amber.sh
+make -j8
 make install
 
 export PATH=$AMBERHOME/bin:$PATH
@@ -118,9 +118,10 @@ tar xvf AmberTools17.tar.bz2
 cd amber16
 export AMBERHOME=`pwd`
 export LOCALFLAGS="-lgfortran -std=legacy"
-export CUSTOMFLAGS="-fallow-argument-mismatch"
+export CUSTOMBUILDFLAGS="-fallow-argument-mismatch -w"
 echo "N" | ./configure -cygwin -noX11 --skip-python gnu
 source $AMBERHOME/amber.sh
+make -j8
 make install
 
 export PATH=$AMBERHOME/bin:$PATH
