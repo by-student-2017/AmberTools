@@ -138,7 +138,9 @@ tar xvf AmberTools13.tar.bz2
 cd amber12
 export AMBERHOME=`pwd`
 export LOCALFLAGS="-lgfortran -std=legacy"
+export CUSTOMBUILDFLAGS="-fallow-argument-mismatch -w"
 ./configure -cygwin -noX11 gnu
+make -j8
 make install
 
 export PATH=$AMBERHOME/bin:$PATH
@@ -156,7 +158,9 @@ tar xvf AmberTools-1.5.tar.bz2
 cd amber11/AmberTools/src
 export AMBERHOME=$HOME/amber11
 export LOCALFLAGS="-lgfortran -std=legacy"
-./configure -nopython -nobintraj -nosleap -nocpptraj -nomtkpp -bit64 -cygwin -noX11 gnu
+export CUSTOMBUILDFLAGS="-fallow-argument-mismatch -w"
+./configure -cygwin -noX11 -nopython -bit64 gnu
+make -j8
 make install
 
 export PATH=$AMBERHOME/bin:$PATH
