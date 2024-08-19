@@ -97,6 +97,21 @@ cd amber20_src
 export AMBERHOME=`pwd`
 export LOCALFLAGS="-lgfortran -std=legacy"
 #export CUSTOMBUILDFLAGS="-fallow-argument-mismatch"
+echo "Y" | ./configure -cygwin -noX11 --skip-python gnu
+source $AMBERHOME/amber.sh
+make -j8
+make install
+
+export PATH=$AMBERHOME/bin:$PATH
+make test
+```
+### AmberTools20 (amber20), Installation (cygwin, failed)
+```
+tar xvf AmberTools20jlmrcc.tar.bz2
+cd amber20_src
+export AMBERHOME=`pwd`
+export LOCALFLAGS="-lgfortran -std=legacy"
+#export CUSTOMBUILDFLAGS="-fallow-argument-mismatch"
 echo "N" | ./configure -cygwin -noX11 --skip-python gnu
 source $AMBERHOME/amber.sh
 make -j8
