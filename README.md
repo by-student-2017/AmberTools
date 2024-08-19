@@ -40,7 +40,8 @@ tar xvf AmberTools20jlmrcc.tar.bz2
 cd amber20_src
 export AMBERHOME=`pwd`
 export LOCALFLAGS="-lgfortran -std=legacy"
-FC="gfortran -fallow-argument-mismatch" ./configure -cygwin -noX11 --skip-python gnu
+export FC="gfortran -fallow-argument-mismatch"
+./configure -cygwin -noX11 --skip-python gnu
 N
 source $AMBERHOME/amber.sh
 make install
@@ -60,7 +61,8 @@ tar xvf AmberTools19.tar.bz2
 cd amber18
 export AMBERHOME=`pwd`
 export LOCALFLAGS="-lgfortran -std=legacy"
-FC="gfortran -fallow-argument-mismatch" ./configure -cygwin -noX11 --skip-python gnu
+export FC="gfortran -fallow-argument-mismatch"
+./configure -cygwin -noX11 --skip-python gnu
 N
 source $AMBERHOME/amber.sh
 make install
@@ -80,7 +82,8 @@ tar xvf AmberTools18.tar.bz2
 cd amber18
 export AMBERHOME=`pwd`
 export LOCALFLAGS="-lgfortran -std=legacy"
-FC="gfortran -fallow-argument-mismatch" ./configure -cygwin -noX11 --skip-python gnu
+export FC="gfortran -fallow-argument-mismatch"
+./configure -cygwin -noX11 --skip-python gnu
 N
 source $AMBERHOME/amber.sh
 make install
@@ -100,7 +103,8 @@ tar xvf AmberTools17.tar.bz2
 cd amber16
 export AMBERHOME=`pwd`
 export LOCALFLAGS="-lgfortran -std=legacy"
-FC="gfortran -fallow-argument-mismatch" ./configure -cygwin -noX11 --skip-python gnu
+export FC="gfortran -fallow-argument-mismatch"
+./configure -cygwin -noX11 --skip-python gnu
 N
 source $AMBERHOME/amber.sh
 make install
