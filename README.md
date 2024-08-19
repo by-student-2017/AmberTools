@@ -118,8 +118,8 @@ tar xvf AmberTools17.tar.bz2
 cd amber16
 export AMBERHOME=`pwd`
 export LOCALFLAGS="-lgfortran -std=legacy"
-#export CUSTOMBUILDFLAGS="-fallow-argument-mismatch"
-echo "N" | ./configure -cygwin -noX11 --skip-python gnu
+export GOTO="/usr/lib/liblapack.a"
+echo "N" | ./configure -cygwin -noX11 --skip-python gnu --with-netcdf /usr/lib/libnetcdf.dll.a
 source $AMBERHOME/amber.sh
 sed -i "s/FREEFORMAT_FLAG/#FREEFORMAT_FLAG/g" $AMBERHOME/AmberTools/src/config.h
 sed -i "s/FILE \*cifpin = NULL,/\/*FILE \*cifpin = NULL,*\/ FILE/g" $AMBERHOME/AmberTools/src/cifparse/lex.cif.c
@@ -222,6 +222,9 @@ tar 1.35-2
 libc++-devel 8.0.1-1
 libgfortran5 1.2.4.0-3
 libssl-devel 3.0.14-1
+libnetcdf-devel 4.9.2-1
+libnetcdf-fortran-devel 4.5.4-1
+netcdf 4.9.2-1
 ```
 
 ## src/config.h
