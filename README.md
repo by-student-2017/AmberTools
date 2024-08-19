@@ -56,6 +56,8 @@ export LOCALFLAGS="-lgfortran -std=legacy"
 N
 source $AMBERHOME/amber.sh
 make install
+export PATH=$AMBERHOME/bin:$PATH
+make test
 ```
 
 
@@ -73,6 +75,8 @@ export LOCALFLAGS="-lgfortran -std=legacy"
 N
 source $AMBERHOME/amber.sh
 make install
+export PATH=$AMBERHOME/bin:$PATH
+make test
 ```
 
 
@@ -88,6 +92,8 @@ export AMBERHOME=`pwd`
 export LOCALFLAGS="-lgfortran -std=legacy"
 ./configure -cygwin -noX11 gnu
 make install
+export PATH=$AMBERHOME/bin:$PATH
+make test
 ```
 
 
@@ -103,6 +109,8 @@ export AMBERHOME=$HOME/amber11
 export LOCALFLAGS="-lgfortran -std=legacy"
 ./configure -nopython -nobintraj -nosleap -nocpptraj -nomtkpp -bit64 -cygwin -noX11 gnu
 make install
+export PATH=$AMBERHOME/bin:$PATH
+make test
 ```
 
 
