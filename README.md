@@ -203,6 +203,7 @@ libssl-devel 3.0.14-1
 - [AT18I1] https://winmostar.com/en/gmx4wm_en_linux.html (./configure -noX11 --skip-python gnu)
 - [AT17I1] https://www.computabio.com/compilation-tutorial-of-ambertools17-under-windows.html (export AMBERHOME='pwd'; ./configure-cygwin-noX11 gnu; source amber.sh; make install)
 - [AT15I1] https://topic.alibabacloud.com/a/summary-of-accelerated-installation-of-amber11--ambertools15--cuda_1_16_32529945.html
+- [AT13I1] http://jswails.wikidot.com/installing-amber12-and-ambertools-13
 - [TU1] https://amber.tkanai-lab.org/ (Japanese)
 - [ATT1] https://amber.tkanai-lab.org/TutorialB4/index.htm, https://www.tkanai-lab.org/wp/wp-content/uploads/2017/09/antechmber-jp.pdf (Japanese)
 - [ATT2] https://oosakik.hatenablog.com/entry/2019/11/19/144858
