@@ -124,6 +124,9 @@ sed -i "s/FREEFORMAT_FLAG/#FREEFORMAT_FLAG/g" $AMBERHOME/AmberTools/src/config.h
 make -j8
 sed -i "s/FILE \*cifpin = NULL,/\/*FILE \*cifpin = NULL,*\/ FILE/g" $AMBERHOME/AmberTools/src/cifparse/lex.cif.c
 make -j8
+sed -i "s/_REAL_ :: twork/_REAL_ :: twork(1)/g" $AMBERHOME/AmberTools/src/sqm/qm2_scf.F90
+sed -i "s/NINT(twork)/NINT(twork(1))/g" $AMBERHOME/AmberTools/src/sqm/qm2_scf.F90
+make -j8
 make install
 
 export PATH=$AMBERHOME/bin:$PATH
