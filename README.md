@@ -60,7 +60,7 @@ wget https://ambermd.org/downloads/AmberTools13.tar.bz2
 ```
 
 
-## AmberTools-1.5
+## AmberTools-1.5 (amber11)
 ```
 wget https://ambermd.org/downloads/AmberTools-1.5.tar.bz2
 ```
