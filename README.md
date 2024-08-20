@@ -2,7 +2,7 @@
 - AmberTools is a free, useful standalone package and a prerequisite for installing Amber itself. The AmberTools suite is free of charge, and its components are mostly released under the GNU General Public License (GPL). A few components are included that are in the public domain or which have other, open-source, licenses. The libsander and libpbsa libraries use the LGPL license. (see https://ambermd.org/GetAmber.php#ambertools)
 
 
-## Ubuntu 22.04 LTS (packages)
+## Ubuntu 22.04 LTS (Related packages)
 ```
 sudo apt update
 sudo apt -y install tcsh make gcc gfortran flex bison patch bc wget xorg-dev libz-dev libbz2-dev build-essential libopenblas-dev libarpack2-dev libnetcdf-dev libnetcdff-dev
