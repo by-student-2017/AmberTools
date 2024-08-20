@@ -109,7 +109,7 @@ bash
 cd $AMBERHOME/test
 make test.serial && make clean.test
 ```
-### AmberTools21, Installation (Ubuntu 22.04 LTS (or WSL2), make, parallel)
+### AmberTools21, Installation (Ubuntu 22.04 LTS (or WSL2), make, parallel, failed)
 - Not use GUI, Quick, and miniconda
 ```
 tar xvf AmberTools21jlmrcc.tar.bz2
