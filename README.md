@@ -65,7 +65,6 @@ cd $AMBERHOME/test
 export DO_PARALLEL="mpirun -np 8"
 make test.parallel.4proc && make clean.test
 ```
-- cmake $AMBERTOOLSHOME/amber22_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber22 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=FALSE -DBUILD_GUI=FALSE -DCUDA=FALSE -DOPENACC=FALSE -DOPENMM=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DTEST_PARALLEL=FALSE -DDOWNLOAD_MINICONDA=FALSE -DBUILD_PYTHON=FALSE -DOPENCL=FALSE -DROCM=FALSE -DNOX11=FALSE -DHDF5=FALSE -DCP2K=FALSE -DPLUMED=FALSE -DQUIP=FALSE -DLAPACK=FALSE -DSCALAPACK=FALSE -DBLA_VENDOR=OpenBLAS -DOpenBLAS_DIR="/usr/lib/x86_64-linux-gnu/libopenblas.a" -DFFTW=FALSE -DFFTW3=FALSE -DFFTW3_ROOT="/usr/lib/x86_64-linux-gnu/libfftw3.a" -DNETCDF=TRUE -DNETCDF_ROOT="/usr/lib/x86_64-linux-gnu/libnetcdff.a" -Wno-dev
 
 
 ## AmberTools23 (amber22) [AT23]
@@ -474,6 +473,7 @@ pinda install ambertools 18
 sudo apt update
 sudo apt -y install tcsh make gcc gfortran flex bison patch bc wget xorg-dev libz-dev libbz2-dev build-essential libopenblas-dev libarpack2-dev libnetcdf-dev libnetcdff-dev
 sudo apt -y install openmpi-bin libopenmpi-dev openssh-client python3-mpi4py python3-numpy python3-setuptools
+sudo apt -y install swig octave 
 ```
 
 
