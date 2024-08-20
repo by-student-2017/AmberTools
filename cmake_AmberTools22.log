@@ -1,0 +1,266 @@
+-- **************************************************************************
+-- Starting configuration of Amber version 22.0.0...
+-- CMake Version: 3.29.3
+-- For how to use this build system, please read this wiki:
+--     http://ambermd.org/pmwiki/pmwiki.php/Main/CMake
+-- For a list of important CMake variables, check here:
+--     http://ambermd.org/pmwiki/pmwiki.php/Main/CMake-Common-Options
+-- **************************************************************************
+-- Amber source not found, only building AmberTools
+CMake Warning (dev) at /home/inukai/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+  The package name passed to `find_package_handle_standard_args` (OpenMP_C)
+  does not match the name of the calling package (OpenMPFixed).  This can
+  lead to problems in calling code that expects `find_package` result
+  variables (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  cmake/patched-cmake-modules/FindOpenMPFixed.cmake:408 (find_package_handle_standard_args)
+  cmake/OpenMPConfig.cmake:11 (find_package)
+  CMakeLists.txt:117 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found OpenMP_C: -fopenmp
+CMake Warning (dev) at /home/inukai/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+  The package name passed to `find_package_handle_standard_args` (OpenMP_CXX)
+  does not match the name of the calling package (OpenMPFixed).  This can
+  lead to problems in calling code that expects `find_package` result
+  variables (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  cmake/patched-cmake-modules/FindOpenMPFixed.cmake:408 (find_package_handle_standard_args)
+  cmake/OpenMPConfig.cmake:11 (find_package)
+  CMakeLists.txt:117 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found OpenMP_CXX: -fopenmp
+CMake Warning (dev) at /home/inukai/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+  The package name passed to `find_package_handle_standard_args`
+  (OpenMP_Fortran) does not match the name of the calling package
+  (OpenMPFixed).  This can lead to problems in calling code that expects
+  `find_package` result variables (e.g., `_FOUND`) to follow a certain
+  pattern.
+Call Stack (most recent call first):
+  cmake/patched-cmake-modules/FindOpenMPFixed.cmake:408 (find_package_handle_standard_args)
+  cmake/OpenMPConfig.cmake:11 (find_package)
+  CMakeLists.txt:117 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found OpenMP_Fortran: -fopenmp
+-- MPI C Compiler: /usr/bin/mpicc
+-- MPI CXX Compiler: /usr/bin/mpicxx
+-- MPI Fortran Compiler: /usr/bin/mpif90
+-- If these are not the correct MPI wrappers, then set MPI_<language>_COMPILER to the correct wrapper and reconfigure.
+CMake Warning (dev) at cmake/CudaConfig.cmake:11 (find_package):
+  Policy CMP0146 is not set: The FindCUDA module is removed.  Run "cmake
+  --help-policy CMP0146" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+Call Stack (most recent call first):
+  CMakeLists.txt:120 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at cmake/PythonInterpreterConfig.cmake:111 (find_package):
+  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+  the cmake_policy command to set the policy and suppress this warning.
+
+Call Stack (most recent call first):
+  CMakeLists.txt:121 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Python version 3.10 -- OK
+CMake Warning (dev) at cmake/PythonBuildConfig.cmake:13 (find_package):
+  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+  the cmake_policy command to set the policy and suppress this warning.
+
+Call Stack (most recent call first):
+  CMakeLists.txt:122 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found perl make: /usr/bin/make
+-- Perl modules well be installed to AMBERHOME/lib/perl
+-- [1;34mRunning updater...[0m 
+-- >>> Preparing to apply updates... please wait. 
+-- >>> No new updates available for AmberTools 22 
+-- [1;34mUpdater done.  If you want to install updates, then set the APPLY_UPDATES variable to true.[0m 
+-- Checking whether to use built-in libraries...
+-- Could NOT find Readline (missing: READLINE_INCLUDE_DIR READLINE_LIBRARY READLINE_WORKS) 
+-- Unable to locate MKL_HOME for your system.  To use MKL, set MKL_HOME to point to your MKL installation location.
+CMake Warning (dev) at /home/inukai/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+  The package name passed to `find_package_handle_standard_args` (OpenMP_C)
+  does not match the name of the calling package (OpenMPFixed).  This can
+  lead to problems in calling code that expects `find_package` result
+  variables (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  cmake/patched-cmake-modules/FindOpenMPFixed.cmake:408 (find_package_handle_standard_args)
+  cmake/hanjianwei/FindMKL.cmake:194 (find_package)
+  cmake/3rdPartyTools.cmake:223 (find_package)
+  CMakeLists.txt:205 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found OpenMP_C: -fopenmp
+CMake Warning (dev) at /home/inukai/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+  The package name passed to `find_package_handle_standard_args` (OpenMP_CXX)
+  does not match the name of the calling package (OpenMPFixed).  This can
+  lead to problems in calling code that expects `find_package` result
+  variables (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  cmake/patched-cmake-modules/FindOpenMPFixed.cmake:408 (find_package_handle_standard_args)
+  cmake/hanjianwei/FindMKL.cmake:194 (find_package)
+  cmake/3rdPartyTools.cmake:223 (find_package)
+  CMakeLists.txt:205 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found OpenMP_CXX: -fopenmp
+CMake Warning (dev) at /home/inukai/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+  The package name passed to `find_package_handle_standard_args`
+  (OpenMP_Fortran) does not match the name of the calling package
+  (OpenMPFixed).  This can lead to problems in calling code that expects
+  `find_package` result variables (e.g., `_FOUND`) to follow a certain
+  pattern.
+Call Stack (most recent call first):
+  cmake/patched-cmake-modules/FindOpenMPFixed.cmake:408 (find_package_handle_standard_args)
+  cmake/hanjianwei/FindMKL.cmake:194 (find_package)
+  cmake/3rdPartyTools.cmake:223 (find_package)
+  CMakeLists.txt:205 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found OpenMP_Fortran: -fopenmp
+-- Could NOT find MKL (missing: MKL_INTERFACE_LIBRARY MKL_GFORTRAN_INTERFACE_LIBRARY MKL_GNU_THREADING_LIBRARY MKL_CORE_LIBRARY MKL_WORKS MKL_FORTRAN_WORKS) 
+-- hints given to look for KMMD in DIR: 
+-- found KMMD?:   KMMD_LIB-NOTFOUND
+-- found INCLUDES?: 
+-- Did not find an external KMMD library, should be able to use bundled. If you have a custom version then set the path with -DKMMD_DIR (missing: KMMD_LIB) 
+-- Could NOT find Protobuf (missing: Protobuf_LIBRARIES Protobuf_INCLUDE_DIR) 
+-- Could NOT find XBLAS (missing: XBLAS_LIBRARY XBLAS_C_WORKS XBLAS_FORTRAN_WORKS) 
+-- A library with BLAS API found.
+-- A library with LAPACK API found.
+-- Could NOT find PnetCDF (missing: PnetCDF_LIBRARY PnetCDF_INCLUDE_DIR PnetCDF_WORKS) 
+-- Could not find some or all of the five main APBS libraries. Please set APBS_GENERIC_LIB, APBS_ROUTINES_LIB, 
+APBS_PMGC_LIB, APBS_MG_LIB, and APBS_MALOC_LIB to point to the correct libraries (missing: APBS_API_LIB APBS_ROUTINES_LIB APBS_MG_LIB APBS_PMGC_LIB APBS_GENERIC_LIB APBS_MALOC_LIB APBS_WORKS APBS_INCLUDES) 
+-- Could NOT find JNI (missing: JAVA_INCLUDE_PATH JAVA_INCLUDE_PATH2 AWT) 
+-- Could NOT find PUPIL (missing: PUPIL_MAIN_LIB PUPIL_BLIND_LIB PUPIL_TIME_LIB JNI_FOUND PUPIL_WORKS) 
+-- Could NOT find LIO (missing: LIO_G2G_LIBRARY LIO_AMBER_LIBRARY LIO_WORKS) 
+-- Checking for Python package mpi4py -- not found
+-- Could NOT find Boost: missing: thread system program_options iostreams regex timer chrono filesystem graph (found /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0"))
+-- Could NOT find MBX (missing: MBX_DIR)
+-- Could not find MBX.  To locate it, add its install dir to the prefix path.
+-- Could NOT find tng_io (missing: tng_io_DIR)
+-- Could not find tng_io.  To locate it, add its install dir to the prefix path.
+-- KMMD not added to 3RDPARTY_SUBDIRS :
+--   : cpptraj/src/readline
+-- System arpack is missing the arsecond_ function.  That function will be built inside amber
+-- Generating amber source scripts
+-- Configuring subdirs...
+-- Reticulating splines...
+CMake Deprecation Warning at AmberTools/src/cpptraj/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.5 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- Found C++11 support: cxx_std_11
+CMake Deprecation Warning at AmberTools/src/cphstats/CMakeLists.txt:3 (cmake_minimum_required):
+  Compatibility with CMake < 3.5 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+If you can't see the following build report, then you need to turn off COLOR_CMAKE_MESSAGES
+-- [1;34m**************************************************************************[0m 
+--                               [4;29mBuild Report[0m 
+--                              [1;4;35mCompiler Flags:[0m 
+-- [1;35mC[0m [1;29mNo-Opt:         [0m [29m -Wall -Wno-unused-function -Wno-unknown-pragmas -Wno-unused-variable -Wno-unused-but-set-variable -fcommon[0m [1;34m-O0[0m 
+-- [1;35mC[0m [1;29mOptimized:      [0m [29m -Wall -Wno-unused-function -Wno-unknown-pragmas -Wno-unused-variable -Wno-unused-but-set-variable -fcommon[0m [1;34m-O3 -mtune=native[0m 
+-- 
+-- [32mCXX[0m [1;29mNo-Opt:       [0m [29m -Wall -Wno-unused-function -Wno-unknown-pragmas -Wno-unused-local-typedefs -Wno-unused-variable -Wno-unused-but-set-variable[0m [1;34m-O0[0m 
+-- [32mCXX[0m [1;29mOptimized:    [0m [29m -Wall -Wno-unused-function -Wno-unknown-pragmas -Wno-unused-local-typedefs -Wno-unused-variable -Wno-unused-but-set-variable[0m [1;34m-O3 -mtune=native[0m 
+-- 
+-- [1;31mFortran[0m [1;29mNo-Opt:   [0m [29m -Wall -Wno-tabs -Wno-unused-function -ffree-line-length-none -Wno-unused-dummy-argument -Wno-unused-variable -fallow-argument-mismatch -fno-inline-arg-packing[0m [1;34m-O0[0m 
+-- [1;31mFortran[0m [1;29mOptimized:[0m [29m -Wall -Wno-tabs -Wno-unused-function -ffree-line-length-none -Wno-unused-dummy-argument -Wno-unused-variable -fallow-argument-mismatch -fno-inline-arg-packing[0m [1;34m-O3 -mtune=native[0m 
+-- 
+--                           [1;4;35m3rd Party Libraries[0m 
+-- ---building bundled: ----------------------------------------------------- 
+-- [32mreadline[0m [1;29m- enables an interactive terminal in cpptraj[0m 
+-- [32mxblas[0m [1;29m- used for high-precision linear algebra calculations[0m 
+-- [32mboost[0m [1;29m- C++ support library[0m 
+-- [32mkmmd[0m [1;29m- Machine-learning molecular dynamics[0m 
+-- [32mtng_io[0m [1;29m- enables GROMACS tng trajectory input in cpptraj[0m 
+-- [32mmpi4py[0m [1;29m- MPI support library for MMPBSA.py[0m 
+-- [32mpnetcdf[0m [1;29m- used by cpptraj for parallel trajectory output[0m 
+-- ---using installed: ------------------------------------------------------ 
+-- [33mblas[0m [1;29m- for fundamental linear algebra calculations[0m 
+-- [33mlapack[0m [1;29m- for fundamental linear algebra calculations[0m 
+-- [33marpack[0m [1;29m- for fundamental linear algebra calculations[0m 
+-- [33mucpp[0m [1;29m- used as a preprocessor for the NAB compiler[0m 
+-- [33mnetcdf[0m [1;29m- for creating trajectory data files[0m 
+-- [33mnetcdf-fortran[0m [1;29m- for creating trajectory data files from Fortran[0m 
+-- [33mfftw[0m [1;29m- used to do Fourier transforms very quickly[0m 
+-- [33mzlib[0m [1;29m- for various compression and decompression tasks[0m 
+-- [33mlibbz2[0m [1;29m- for bzip2 compression in cpptraj[0m 
+-- [33mplumed[0m [1;29m- used as an alternate MD backend for Sander[0m 
+-- [33mlibm[0m [1;29m- for fundamental math routines if they are not contained in the C library[0m 
+-- [33mperlmol[0m [1;29m- chemistry library used by FEW[0m 
+-- ---disabled: ------------------------------------------------ 
+-- [1;31mc9x-complex[0m [1;29m- used as a support library on systems that do not have C99 complex.h support[0m 
+-- [1;31mprotobuf[0m [1;29m- protocol buffers library, used for communication with external software in QM/MM[0m 
+-- [1;31mlio[0m [1;29m- used by Sander to run certain QM routines on the GPU[0m 
+-- [1;31mapbs[0m [1;29m- used by Sander as an alternate Poisson-Boltzmann equation solver[0m 
+-- [1;31mpupil[0m [1;29m- used by Sander as an alternate user interface[0m 
+-- [1;31mmkl[0m [1;29m- alternate implementation of lapack and blas that is tuned for speed[0m 
+-- [1;31mmbx[0m [1;29m- computes energies and forces for pmemd with the MB-pol model[0m 
+
+--                                [1;4;35mFeatures:[0m 
+-- MPI:                     [32mON[0m 
+-- OpenMP:                  [32mON[0m 
+-- CUDA:                    [1;31mOFF[0m 
+-- NCCL:                    [1;31mOFF[0m 
+-- Build Shared Libraries:  [32mON[0m 
+-- Build GUI Interfaces:    [1;31mOFF[0m 
+-- Build Python Programs:   [32mON[0m 
+--  -Python Interpreter:    [1;34m/home/inukai/miniconda3/bin/python[0m [33m(version 3.10)[0m 
+-- Build Perl Programs:     [32mON[0m 
+-- Build configuration:     [1;34mRELEASE[0m 
+-- Target Processor:        [33mx86_64[0m 
+-- Build Documentation:     [1;31mOFF[0m 
+-- Sander Variants:         [1;34mnormal LES API LES-API MPI LES-MPI[0m 
+-- Install location:        [1;34m/mnt/c/Users/manab/amber22/[0m 
+-- Installation of Tests:   [32mON[0m 
+
+--                               [1;4;35mCompilers:[0m 
+-- [36m        C:[0m [33mGNU 11.3.0[0m [1;31m(/usr/bin/gcc)[0m 
+-- [36m      CXX:[0m [33mGNU 11.3.0[0m [1;31m(/usr/bin/g++)[0m 
+-- [36m  Fortran:[0m [33mGNU 11.3.0[0m [1;31m(/usr/bin/gfortran)[0m 
+
+--                              [1;4;35mBuilding Tools:[0m 
+-- addles amberlite ambpdb antechamber cifparse cphstats cpptraj emil etc few gbnsr6 gem.pmemd kmmd leap lib mdgx mm_pbsa mmpbsa_py moft nab ndiff-2.00 nfe-umbrella-slice nmode nmr_aux packmol_memgen paramfit parmed pbsa pdb4amber pymsmt pysander pytraj reduce rism sander saxs sebomd sff sqm xray xtalutil 
+
+--                            [1;4;35mNOT Building Tools:[0m 
+-- [1;31mquick - BUILD_QUICK is not enabled[0m 
+-- [1;31mtcpb-cpp - BUILD_TCPB is not enabled[0m 
+-- [1;31mtcpb-cpp/pytcpb - BUILD_TCPB is not enabled[0m 
+-- [1;31mreaxff_puremd - BUILD_REAXFF_PUREMD is not enabled[0m 
+-- [1;31mgpu_utils - Not included in AmberTools[0m 
+-- [1;31mpmemd - Not included in AmberTools[0m 
+-- [1;34m**************************************************************************[0m 
+-- Environment resource files are provided to set the proper environment
+-- variables to use AMBER and AmberTools. This is required to run any Python
+-- programs (like MMPBSA.py, ParmEd, MCPB.py, and pytraj)
+-- 
+-- If you use a Bourne shell (e.g., bash, sh, zsh, etc.), source the
+-- /mnt/c/Users/manab/amber22//amber.sh file in your shell. Consider adding the line
+--   test -f /mnt/c/Users/manab/amber22//amber.sh && source /mnt/c/Users/manab/amber22//amber.sh
+-- to your startup file (e.g., ~/.bashrc)
+-- 
+-- If you use a C shell (e.g., csh, tcsh), source the
+-- /mnt/c/Users/manab/amber22//amber.csh file in your shell. Consider adding the line
+--   test -f /mnt/c/Users/manab/amber22//amber.csh && source /mnt/c/Users/manab/amber22//amber.csh
+-- to your startup file (e.g., ~/.cshrc)
+-- 
+-- Amber will be installed to /mnt/c/Users/manab/amber22/
+-- Configuring done (50.6s)
+-- Generating done (12.2s)
+-- Build files have been written to: /mnt/c/Users/manab/amber22_src/build
