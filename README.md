@@ -75,7 +75,34 @@ bash
 cd $AMBERHOME/test
 make test.serial && make clean.test
 ```
-### AmberTools24, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, GPU (=CUDA), no check)
+### AmberTools24, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, 1 CPU (=serial))
+- Not use GPU, and GUI
+- [-- Found PythonLibs: /home/inukai/miniconda3/lib/libpython3.10.so (found suitable exact version "3.10.14")] (If miniconda3 is not installed, set "-DDOWNLOAD_MINICONDA=TRUE".)
+```
+tar xvf AmberTools24jlmrcc.tar.bz2
+cd amber24_src
+./update_amber --check-updates
+./update_amber --update
+cd build
+AMBERTOOLSHOME=$(dirname $(dirname `pwd`))
+cmake $AMBERTOOLSHOME/amber24_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber24 -DCOMPILER=GNU -DMPI=TRUE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=TRUE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE -Wno-dev 2>&1 | tee cmake.log
+make -j8 && make install
+
+source $AMBERTOOLSHOME/amber24/amber.sh
+echo "# Ambertools24 (amber24) environment settings" >> ~/.bashrc
+echo "source $AMBERHOME/amber.sh" >> ~/.bashrc
+echo 'export PATH=$PATH:'"$AMBERHOME/bin" >> ~/.bashrc
+echo 'export PATH=$PATH:'"$AMBERHOME/lib" >> ~/.bashrc
+echo 'export PATH=$PATH:'"$AMBERHOME/include" >> ~/.bashrc
+echo 'export PATH=$PATH:'"$AMBERHOME/dat" >> ~/.bashrc
+bash
+```
+- test (needs many time)
+```
+cd $AMBERHOME/test
+make test.serial && make clean.test
+```
+### AmberTools24, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, GPU (=CUDA), maybe failed)
 - Not use MPI
 - This is a very simple executable file with few dependencies, suitable for basic functionality. It has also passed testing.
 ```
