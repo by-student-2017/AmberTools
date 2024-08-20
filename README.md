@@ -49,7 +49,7 @@ bash
 cd $AMBERHOME/test
 make -j8 test.serial && make clean.test
 ```
-### AmberTools22, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, GPU (CUDA()
+### AmberTools22, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, GPU (CUDA))
 - Not use GUI, Quick, miniconda
 ```
 tar xvf AmberTools22jlmrcc.tar.bz2
