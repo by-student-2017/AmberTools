@@ -6,7 +6,7 @@
 - I couldn't upload it because I didn't have enough storage space. Please download it directly from the link below.
 
 
-## AmberTools24 [AT24]
+## AmberTools24 (amber24) [AT24]
 ```
 wget https://ambermd.org/downloads/AmberTools24_rc5.tar.bz2
 ```
