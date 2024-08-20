@@ -10,7 +10,7 @@
 ```
 wget https://ambermd.org/downloads/AmberTools24_rc5.tar.bz2
 ```
-### AmberTools24, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, 1 CPU (serial))
+### AmberTools24, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, 1 CPU (=serial))
 - Not use MPI, GPU, GUI, Quick, python, and miniconda
 - This is a very simple executable file with few dependencies, suitable for basic functionality. It has also passed testing.
 ```
@@ -71,7 +71,7 @@ make test.parallel.4proc && make clean.test
 ```
 wget https://ambermd.org/downloads/AmberTools23_rc6.tar.bz2
 ```
-### AmberTools23, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, 1 CPU (serial))
+### AmberTools23, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, 1 CPU (=serial))
 - Not use MPI, GPU, GUI, Quick, python, and miniconda
 - This is a very simple executable file with few dependencies, suitable for basic functionality. It has also passed testing.
 ```
