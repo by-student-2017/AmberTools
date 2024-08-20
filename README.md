@@ -22,7 +22,7 @@ wget https://ambermd.org/downloads/AmberTools23_rc6.tar.bz2
 ```
 wget https://ambermd.org/downloads/AmberTools22jlmrcc.tar.bz2
 ```
-### AmberTools22 (amber22), Installation (cygwin, failed)
+### AmberTools22 (amber22), Installation (WSL2, ubuntu 22.04, cmake failed)
 ```
 tar xvf AmberTools22jlmrcc.tar.bz2
 cd amber22_src
@@ -38,7 +38,7 @@ make install
 #export PATH=$AMBERHOME/amber22/bin:$PATH
 #make test
 ```
-
+- Memo: cmake $AMBERHOME/amber20_src -DCMAKE_INSTALL_PREFIX=$AMBERHOME/amber22 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=FALSE -DBUILD_GUI=FALSE -DCUDA=FALSE -DOPENACC=FALSE -DOPENMM=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DTEST_PARALLEL=FALSE -DDOWNLOAD_MINICONDA=FALSE -DBUILD_PYTHON=FALSE -DOPENCL=FALSE -DROCM=FALSE -DNOX11=FALSE -DHDF5=FALSE -DCP2K=FALSE -DPLUMED=FALSE -DQUIP=FALSE -DLAPACK=FALSE -DSCALAPACK=FALSE -DBLA_VENDOR=OpenBLAS -DOpenBLAS_DIR="/usr/lib/x86_64-linux-gnu/libopenblas.a" -DFFTW=FALSE -DFFTW3=FALSE -DFFTW3_ROOT="/usr/lib/x86_64-linux-gnu/libfftw3.a" -DNETCDF=TRUE -DNETCDF_ROOT="/usr/lib/x86_64-linux-gnu/libnetcdff.a" -Wno-dev
 
 ## AmberTools21 [AT21]
 ```
