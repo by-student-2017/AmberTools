@@ -73,7 +73,7 @@ bash
 - test (parallel)
 ```
 cd $AMBERHOME/test
-export DO_PARALLEL="mpirun -np 4"
+export DO_PARALLEL="mpirun -np 8"
 make test.parallel.4proc && make clean.test
 ```
 
