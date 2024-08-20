@@ -6,7 +6,7 @@
 - I couldn't upload it because I didn't have enough storage space. Please download it directly from the link below.
 
 
-## Ubuntu 22.04 LTS
+## Ubuntu 22.04 LTS (packages)
 ```
 sudo apt update
 sudo apt -y install tcsh make gcc gfortran flex bison patch bc wget xorg-dev libz-dev libbz2-dev build-essential libopenblas-dev libarpack2-dev libnetcdf-dev libnetcdff-dev
@@ -18,7 +18,7 @@ sudo apt -y install swig octave-dev guile-3.0-dev libprotobuf-dev libperl-dev ne
 ```
 
 
-## PLUMED
+## PLUMED, Installation
 ```
 wget https://github.com/plumed/plumed2/releases/download/v2.9.0/plumed-2.9.0.tgz
 tar zxvf plumed-2.9.0.tgz
