@@ -25,7 +25,10 @@ wget https://ambermd.org/downloads/AmberTools22jlmrcc.tar.bz2
 ### AmberTools22 (amber22), Installation (cygwin, failed)
 ```
 tar xvf AmberTools22jlmrcc.tar.bz2
-cd amber22_src/build
+cd amber22_src
+./update_amber --check-updates
+./update_amber --update
+cd build
 AMBERHOME=$(dirname $(dirname `pwd`))
 cmake $AMBERHOME/amber22_src -DCMAKE_INSTALL_PREFIX=$AMBERHOME/amber22 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=FALSE -DBUILD_GUI=FALSE -DCUDA=FALSE -DINSTALL_TESTS=TRUE -DTEST_PARALLEL=FALSE -DDOWNLOAD_MINICONDA=FALSE -DBUILD_PYTHON=FALSE -DNETCDF=FALSE -Wno-dev
 #source $AMBERHOME/amber22/amber.sh
@@ -65,10 +68,13 @@ wget https://ambermd.org/downloads/AmberTools20jlmrcc.tar.bz2
 ### AmberTools20 (amber20), Installation (WSL2, ubuntu 22.04, cmake failed)
 ```
 tar xvf AmberTools20jlmrcc.tar.bz2
-cd amber20_src/build
+cd amber20_src
+./update_amber --check-updates
+./update_amber --update
+cd build
 AMBERHOME=$(dirname $(dirname `pwd`))
 cmake $AMBERHOME/amber20_src -DCMAKE_INSTALL_PREFIX=$AMBERHOME/amber20 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=FALSE -DBUILD_GUI=FALSE -DCUDA=FALSE -DINSTALL_TESTS=TRUE -DTEST_PARALLEL=FALSE -DDOWNLOAD_MINICONDA=FALSE -DBUILD_PYTHON=FALSE -Wno-dev
-#source $AMBERHOME/amber20/amber.sh
+source $AMBERHOME/amber20_src/amber.sh
 make -j8
 make install
 
