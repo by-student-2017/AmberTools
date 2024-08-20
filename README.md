@@ -35,7 +35,7 @@ bash
 ````
 
 
-## Note
+## Note for AmberTools
 - I couldn't upload it because I didn't have enough storage space. Please download it directly from the link below.
 
 
