@@ -82,7 +82,7 @@ make test.parallel.4proc && make clean.test
 ```
 wget https://ambermd.org/downloads/AmberTools21jlmrcc.tar.bz2
 ```
-### AmberTools21, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, 1 CPU (serial))
+### AmberTools21, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, 1 CPU (serial), failed)
 - Not use MPI, GPU, GUI, Quick, and miniconda
 - This is a very simple executable file with few dependencies, suitable for basic functionality. It has also passed testing.
 ```
