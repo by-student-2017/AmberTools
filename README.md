@@ -32,7 +32,7 @@ echo 'export PATH=$PATH:'"$AMBERHOME/include" >> ~/.bashrc
 echo 'export PATH=$PATH:'"$AMBERHOME/dat" >> ~/.bashrc
 bash
 ```
-- test
+- test (start:20/Aug/20:05 - end:???)
 ```
 cd $AMBERHOME/test
 make test.serial && make clean.test
