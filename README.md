@@ -97,6 +97,7 @@ bash
 cd $AMBERHOME/test
 export DO_PARALLEL="mpirun -np 8"
 make test.parallel.4proc && make clean.test
+unset DO_PARALLEL
 ```
 
 
@@ -158,6 +159,7 @@ bash
 cd $AMBERHOME/test
 export DO_PARALLEL="mpirun -np 8"
 make test.parallel.4proc && make clean.test
+unset DO_PARALLEL
 ```
 
 
