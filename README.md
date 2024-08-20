@@ -98,7 +98,7 @@ echo 'export PATH=$PATH:'"$AMBERHOME/include" >> ~/.bashrc
 echo 'export PATH=$PATH:'"$AMBERHOME/dat" >> ~/.bashrc
 bash
 ```
-- Note (https://github.com/stotko/stdgpu/issues/337): Error: /usr/include/c++/11/bits/std_function.h:435:145: error: parameter packs not expanded with ‘...’:
+- Note (https://github.com/stotko/stdgpu/issues/337, https://github.com/NVlabs/instant-ngp/issues/119): Error: /usr/include/c++/11/bits/std_function.h:435:145: error: parameter packs not expanded with ‘...’:
 /usr/include/c++/11/bits/std_function.h:435:145: note:         ‘_ArgTypes’
 CMake Error at pbsa.cuda_generated_cuda_pb.cu.o.RELEASE.cmake:278 (message):
 - test (about 1 hours)
