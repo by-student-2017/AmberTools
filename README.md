@@ -36,9 +36,12 @@ cmake $AMBERTOOLSHOME/amber22_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber22
 make -j8 && make install
 
 source $AMBERTOOLSHOME/amber22/amber.sh
-#export PATH=$AMBERHOME/bin:$PATH
-echo '# Ambertools22 (amber22) environment settings' >> ~/.bashrc
+echo "# Ambertools22 (amber22) environment settings" >> ~/.bashrc
+echo "source $AMBERHOME/amber.sh" >> ~/.bashrc
 echo 'export PATH=$PATH:'"$AMBERHOME/bin" >> ~/.bashrc
+echo 'export PATH=$PATH:'"$AMBERHOME/lib" >> ~/.bashrc
+echo 'export PATH=$PATH:'"$AMBERHOME/include" >> ~/.bashrc
+echo 'export PATH=$PATH:'"$AMBERHOME/dat" >> ~/.bashrc
 bash
 ```
 - test (need long time (about 2 hours))
