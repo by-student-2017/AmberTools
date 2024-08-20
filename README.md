@@ -12,9 +12,63 @@ wget https://ambermd.org/downloads/AmberTools24_rc5.tar.bz2
 ```
 
 
-## AmberTools23 [AT23]
+## AmberTools23 (amber22) [AT23]
 ```
 wget https://ambermd.org/downloads/AmberTools23_rc6.tar.bz2
+```
+### AmberTools23, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, 1 CPU (serial))
+- Not use MPI, GPU, GUI, Quick, and miniconda
+- This is a very simple executable file with few dependencies, suitable for basic functionality. It has also passed testing.
+```
+tar xvf AmberTools23jlmrcc.tar.bz2
+cd amber22_src
+./update_amber --check-updates
+./update_amber --update
+cd build
+AMBERTOOLSHOME=$(dirname $(dirname `pwd`))
+cmake $AMBERTOOLSHOME/amber22_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber22 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE 2>&1 | tee cmake.log
+make -j8 && make install
+
+source $AMBERTOOLSHOME/amber22/amber.sh
+echo "# Ambertools23 (amber22) environment settings" >> ~/.bashrc
+echo "source $AMBERHOME/amber.sh" >> ~/.bashrc
+echo 'export PATH=$PATH:'"$AMBERHOME/bin" >> ~/.bashrc
+echo 'export PATH=$PATH:'"$AMBERHOME/lib" >> ~/.bashrc
+echo 'export PATH=$PATH:'"$AMBERHOME/include" >> ~/.bashrc
+echo 'export PATH=$PATH:'"$AMBERHOME/dat" >> ~/.bashrc
+bash
+```
+- test (need long time (about 2 hours))
+```
+cd $AMBERHOME/test
+make test.serial && make clean.test
+```
+### AmberTools23, Installation (Ubuntu 22.04 LTS (or WSL2), make, parallel)
+- Not use GUI, Quick, and miniconda
+```
+tar xvf AmberTools23jlmrcc.tar.bz2
+cd amber22_src
+./update_amber --check-updates
+./update_amber --update
+cd build
+AMBERTOOLSHOME=$(dirname $(dirname `pwd`))
+cmake $AMBERTOOLSHOME/amber22_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber22 -DCOMPILER=GNU -DMPI=TRUE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE 2>&1 | tee cmake.log
+make -j8 && make install
+
+source $AMBERTOOLSHOME/amber22/amber.sh
+echo "# Ambertools23 (amber22) environment settings" >> ~/.bashrc
+echo "source $AMBERHOME/amber.sh" >> ~/.bashrc
+echo 'export PATH=$PATH:'"$AMBERHOME/bin" >> ~/.bashrc
+echo 'export PATH=$PATH:'"$AMBERHOME/lib" >> ~/.bashrc
+echo 'export PATH=$PATH:'"$AMBERHOME/include" >> ~/.bashrc
+echo 'export PATH=$PATH:'"$AMBERHOME/dat" >> ~/.bashrc
+bash
+```
+- test (parallel)
+```
+cd $AMBERHOME/test
+export DO_PARALLEL="mpirun -np 8"
+make test.parallel.4proc && make clean.test
 ```
 
 
