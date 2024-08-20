@@ -12,6 +12,10 @@ sudo apt -y install openmpi-bin libopenmpi-dev openssh-client python3-mpi4py pyt
 ```
 sudo apt -y install swig octave-dev guile-3.0-dev libprotobuf-dev libperl-dev netcdf-bin
 ```
+- GPU
+```
+sudo apt -y install libnvidia-ml-dev
+```
 
 
 ## PLUMED, Installation
