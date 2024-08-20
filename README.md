@@ -76,7 +76,7 @@ cd $AMBERHOME/test
 make test.serial && make clean.test
 ```
 ### AmberTools24, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, python, quick, no check)
-- Not use GPU, and GUI
+- Not use MPI, GPU, and GUI
 - [-- Found PythonLibs: /home/inukai/miniconda3/lib/libpython3.10.so (found suitable exact version "3.10.14")] (If miniconda3 is not installed, set "-DDOWNLOAD_MINICONDA=TRUE".)
 ```
 tar xvf AmberTools24jlmrcc.tar.bz2
@@ -85,7 +85,7 @@ cd amber24_src
 ./update_amber --update
 cd build
 AMBERTOOLSHOME=$(dirname $(dirname `pwd`))
-cmake $AMBERTOOLSHOME/amber24_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber24 -DCOMPILER=GNU -DMPI=TRUE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=TRUE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE -Wno-dev 2>&1 | tee cmake.log
+cmake $AMBERTOOLSHOME/amber24_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber24 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=TRUE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE -Wno-dev 2>&1 | tee cmake.log
 make -j8 && make install
 
 source $AMBERTOOLSHOME/amber24/amber.sh
