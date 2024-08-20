@@ -36,16 +36,16 @@ cmake $AMBERTOOLSHOME/amber22_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber22
 make -j8 && make install
 
 source $AMBERTOOLSHOME/amber22/amber.sh
-export PATH=$AMBERHOME/bin:$PATH
-
-cd $AMBERHOME/test
-make test.serial && make clean.test
-
+#export PATH=$AMBERHOME/bin:$PATH
 echo '# Ambertools22 (amber22) environment settings' >> ~/.bashrc
 echo 'export PATH=$PATH:'"$AMBERHOME/bin" >> ~/.bashrc
 bash
 ```
-- Memo: cmake $AMBERHOME/amber22_src -DCMAKE_INSTALL_PREFIX=$AMBERHOME/amber22 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=FALSE -DBUILD_GUI=FALSE -DCUDA=FALSE -DOPENACC=FALSE -DOPENMM=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DTEST_PARALLEL=FALSE -DDOWNLOAD_MINICONDA=FALSE -DBUILD_PYTHON=FALSE -DOPENCL=FALSE -DROCM=FALSE -DNOX11=FALSE -DHDF5=FALSE -DCP2K=FALSE -DPLUMED=FALSE -DQUIP=FALSE -DLAPACK=FALSE -DSCALAPACK=FALSE -DBLA_VENDOR=OpenBLAS -DOpenBLAS_DIR="/usr/lib/x86_64-linux-gnu/libopenblas.a" -DFFTW=FALSE -DFFTW3=FALSE -DFFTW3_ROOT="/usr/lib/x86_64-linux-gnu/libfftw3.a" -DNETCDF=TRUE -DNETCDF_ROOT="/usr/lib/x86_64-linux-gnu/libnetcdff.a" -DFORCE_INTERNAL_LIBS="arpack" -DCHECK_UPDATES=TRUE -DCUDA_TOOLKIT_ROOT_DIR=${CUDA_HOME}  -Wno-dev 2>&1 | tee cmake.log
+- test (need long time (about 2 hours))
+```
+cd $AMBERHOME/test
+make test.serial && make clean.test
+```
 
 
 ## AmberTools21 [AT21]
