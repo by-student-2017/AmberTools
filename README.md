@@ -34,8 +34,10 @@ cmake $AMBERHOME/amber22_src -DCMAKE_INSTALL_PREFIX=$AMBERHOME/amber22 -DCOMPILE
 make -j8
 make install
 
+AMBERHOME=$(dirname $(dirname `pwd`))
 source $AMBERHOME/amber22/amber.sh
 export PATH=$AMBERHOME/amber22/bin:$PATH
+bash
 
 #make test.serial && make clean.test
 ```
