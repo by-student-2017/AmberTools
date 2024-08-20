@@ -31,8 +31,7 @@ cd amber22_src
 cd build
 AMBERHOME=$(dirname $(dirname `pwd`))
 cmake $AMBERHOME/amber22_src -DCMAKE_INSTALL_PREFIX=$AMBERHOME/amber22 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=FALSE -DBUILD_GUI=FALSE -DNCCL=FALSE -DCUDA=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DTEST_PARALLEL=FALSE -DDOWNLOAD_MINICONDA=FALSE -DBUILD_PYTHON=FALSE -DBLA_VENDOR=OpenBLAS 2>&1 | tee cmake.log
-make -j8
-make install
+make -j8 && make install
 
 AMBERHOME=$(dirname $(dirname `pwd`))
 source $AMBERHOME/amber22/amber.sh
