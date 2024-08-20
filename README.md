@@ -24,6 +24,7 @@ wget https://ambermd.org/downloads/AmberTools22jlmrcc.tar.bz2
 ```
 ### AmberTools22, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, 1 CPU)
 - Not use MPI, OpenMP, GPU, GUI, Quick, python, miniconda
+- This is a very simple executable file with few dependencies, suitable for basic functionality.
 ```
 tar xvf AmberTools22jlmrcc.tar.bz2
 cd amber22_src
