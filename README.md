@@ -105,6 +105,7 @@ unset DO_PARALLEL
 - Note: BASIS (of quick) = 6-31G**, cc-pVTZ, aug-cc-pVTZ, def2-TZVP, etc
 - Note: sander (Simulated Annealing with NMR-Derived Energy Restraints)
 - Note: QM: ADF, Gaussian, Orca, Q-Chem, MRCC, Fireball
+- Note: sebomd (Semi-Empirical Born-Oppenheimer Molecular Dynamics): NDDO (=AN1, PM3, RM1, etc)
 
 
 ## AmberTools23 (amber22) [AT23]
