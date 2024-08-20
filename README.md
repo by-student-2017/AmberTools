@@ -62,7 +62,7 @@ make test
 ```
 wget https://ambermd.org/downloads/AmberTools20jlmrcc.tar.bz2
 ```
-### AmberTools20 (amber20), Installation (WSL2, ubuntu 22.04, failed)
+### AmberTools20 (amber20), Installation (WSL2, ubuntu 22.04, cmake failed)
 ```
 tar xvf AmberTools20jlmrcc.tar.bz2
 cd amber20_src/build
@@ -91,7 +91,7 @@ make install
 export PATH=$AMBERHOME/bin:$PATH
 make test
 ```
-### AmberTools20 (amber20), Installation (cygwin, failed)
+### AmberTools20 (amber20), Installation (cygwin, update "Y", failed)
 ```
 tar xvf AmberTools20jlmrcc.tar.bz2
 cd amber20_src
@@ -106,7 +106,7 @@ make install
 export PATH=$AMBERHOME/bin:$PATH
 make test
 ```
-### AmberTools20 (amber20), Installation (cygwin, failed)
+### AmberTools20 (amber20), Installation (cygwin, update "N", failed)
 ```
 tar xvf AmberTools20jlmrcc.tar.bz2
 cd amber20_src
