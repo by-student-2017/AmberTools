@@ -35,7 +35,6 @@ make -j8 && make install
 
 source $AMBERHOME/amber22/amber.sh
 export PATH=$AMBERHOME/amber22/bin:$PATH
-bash
 
 #make test.serial && make clean.test
 ```
