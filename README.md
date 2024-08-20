@@ -14,6 +14,7 @@ sudo apt -y install swig octave-dev guile-3.0-dev libprotobuf-dev libperl-dev ne
 ```
 - GPU
 ```
+sudo apt -y install gcc-10
 sudo apt -y install nvidia-cuda-toolkit libnvidia-ml-dev
 ```
 
@@ -85,6 +86,7 @@ cd amber24_src
 cd build
 AMBERTOOLSHOME=$(dirname $(dirname `pwd`))
 export CUDA_HOME="/usr/lib/cuda"
+export CC=gcc-10
 cmake $AMBERTOOLSHOME/amber24_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber24 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=FALSE -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=${CUDA_HOME} -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=TRUE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE -Wno-dev 2>&1 | tee cmake.log
 make -j8 && make install
 
@@ -97,6 +99,9 @@ echo 'export PATH=$PATH:'"$AMBERHOME/include" >> ~/.bashrc
 echo 'export PATH=$PATH:'"$AMBERHOME/dat" >> ~/.bashrc
 bash
 ```
+- Note: Error: /usr/include/c++/11/bits/std_function.h:435:145: error: parameter packs not expanded with ‘...’:
+/usr/include/c++/11/bits/std_function.h:435:145: note:         ‘_ArgTypes’
+CMake Error at pbsa.cuda_generated_cuda_pb.cu.o.RELEASE.cmake:278 (message):
 - test (about 1 hours)
 ```
 cd $AMBERHOME/test
