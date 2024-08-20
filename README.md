@@ -75,7 +75,7 @@ bash
 cd $AMBERHOME/test
 make test.serial && make clean.test
 ```
-### AmberTools24, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, python, quick, no check)
+### AmberTools24, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, python, quick)
 - Not use MPI, GPU, and GUI
 - [-- Found PythonLibs: /home/inukai/miniconda3/lib/libpython3.10.so (found suitable exact version "3.10.14")] (If miniconda3 is not installed, set "-DDOWNLOAD_MINICONDA=TRUE".)
 ```
@@ -97,7 +97,7 @@ echo 'export PATH=$PATH:'"$AMBERHOME/include" >> ~/.bashrc
 echo 'export PATH=$PATH:'"$AMBERHOME/dat" >> ~/.bashrc
 bash
 ```
-- test (needs many time)
+- test (about 3 hours)
 ```
 cd $AMBERHOME/test
 make test.serial && make clean.test
