@@ -47,7 +47,7 @@ bash
 - test (need long time (about 2 hours))
 ```
 cd $AMBERHOME/test
-make test.serial && make clean.test
+make -j8 test.serial && make clean.test
 ```
 
 
