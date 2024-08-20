@@ -23,7 +23,7 @@ wget https://ambermd.org/downloads/AmberTools23_rc6.tar.bz2
 wget https://ambermd.org/downloads/AmberTools22jlmrcc.tar.bz2
 ```
 ### AmberTools22, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, 1 CPU (serial))
-- Not use MPI, GPU, GUI, Quick, miniconda
+- Not use MPI, GPU, GUI, Quick, and miniconda
 - This is a very simple executable file with few dependencies, suitable for basic functionality. It has also passed testing.
 ```
 tar xvf AmberTools22jlmrcc.tar.bz2
@@ -50,7 +50,7 @@ cd $AMBERHOME/test
 make test.serial && make clean.test
 ```
 ### AmberTools22, Installation (Ubuntu 22.04 LTS (or WSL2), make, parallel)
-- Not use GUI, Quick, miniconda
+- Not use GUI, Quick, and miniconda
 ```
 tar xvf AmberTools22jlmrcc.tar.bz2
 cd amber22_src
@@ -103,8 +103,8 @@ make test
 ```
 wget https://ambermd.org/downloads/AmberTools20jlmrcc.tar.bz2
 ```
-### AmberTools20, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, 1 CPU (serial), no check)
-- Not use MPI, GPU, GUI, Quick, miniconda
+### AmberTools20, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, 1 CPU (serial), failed)
+- Not use MPI, GPU, GUI, Quick, python, and miniconda
 - This is a very simple executable file with few dependencies, suitable for basic functionality. It has also passed testing.
 ```
 tar xvf AmberTools20jlmrcc.tar.bz2
@@ -113,7 +113,7 @@ cd amber20_src
 ./update_amber --update
 cd build
 AMBERTOOLSHOME=$(dirname $(dirname `pwd`))
-cmake $AMBERTOOLSHOME/amber20_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber20 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE 2>&1 | tee cmake.log
+cmake $AMBERTOOLSHOME/amber20_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber20 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=FALSE -DDOWNLOAD_MINICONDA=FALSE 2>&1 | tee cmake.log
 make -j8 && make install
 
 source $AMBERTOOLSHOME/amber20/amber.sh
@@ -125,38 +125,8 @@ echo 'export PATH=$PATH:'"$AMBERHOME/include" >> ~/.bashrc
 echo 'export PATH=$PATH:'"$AMBERHOME/dat" >> ~/.bashrc
 bash
 ```
-- test (need long time (about 2 hours))
-```
-cd $AMBERHOME/test
-make test.serial && make clean.test
-```
-### AmberTools20, Installation (Ubuntu 22.04 LTS (or WSL2), make, parallel, no check)
-- Not use GUI, Quick, miniconda
-```
-tar xvf AmberTools20jlmrcc.tar.bz2
-cd amber20_src
-./update_amber --check-updates
-./update_amber --update
-cd build
-AMBERTOOLSHOME=$(dirname $(dirname `pwd`))
-cmake $AMBERTOOLSHOME/amber20_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber20 -DCOMPILER=GNU -DMPI=TRUE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE 2>&1 | tee cmake.log
-make -j8 && make install
-
-source $AMBERTOOLSHOME/amber20/amber.sh
-echo "# Ambertools20 (amber20) environment settings" >> ~/.bashrc
-echo "source $AMBERHOME/amber.sh" >> ~/.bashrc
-echo 'export PATH=$PATH:'"$AMBERHOME/bin" >> ~/.bashrc
-echo 'export PATH=$PATH:'"$AMBERHOME/lib" >> ~/.bashrc
-echo 'export PATH=$PATH:'"$AMBERHOME/include" >> ~/.bashrc
-echo 'export PATH=$PATH:'"$AMBERHOME/dat" >> ~/.bashrc
-bash
-```
-- test (parallel)
-```
-cd $AMBERHOME/test
-export DO_PARALLEL="mpirun -np 8"
-make test.parallel.4proc && make clean.test
-```
+- amber20_src/AmberTools/src/arpack/dnaitr.f:658:35:
+- Error: Rank mismatch between actual argument at (1) and actual argument at (2) (scalar and rank-1)
 - Memo: cmake $AMBERHOME/amber20_src -DCMAKE_INSTALL_PREFIX=$AMBERHOME/amber22 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=FALSE -DBUILD_GUI=FALSE -DCUDA=FALSE -DOPENACC=FALSE -DOPENMM=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DTEST_PARALLEL=FALSE -DDOWNLOAD_MINICONDA=FALSE -DBUILD_PYTHON=FALSE -DOPENCL=FALSE -DROCM=FALSE -DNOX11=FALSE -DHDF5=FALSE -DCP2K=FALSE -DPLUMED=FALSE -DQUIP=FALSE -DLAPACK=FALSE -DSCALAPACK=FALSE -DBLA_VENDOR=OpenBLAS -DOpenBLAS_DIR="/usr/lib/x86_64-linux-gnu/libopenblas.a" -DFFTW=FALSE -DFFTW3=FALSE -DFFTW3_ROOT="/usr/lib/x86_64-linux-gnu/libfftw3.a" -DNETCDF=TRUE -DNETCDF_ROOT="/usr/lib/x86_64-linux-gnu/libnetcdff.a" -Wno-dev
 ### AmberTools20 (amber20), Installation (WSL2, ubuntu 22.04, failed)
 ```
