@@ -71,7 +71,7 @@ cd $AMBERHOME/test
 make test.serial && make clean.test
 ```
 ### AmberTools24, Installation (Ubuntu 22.04 LTS (or WSL2), make, parallel)
-- Not use GUI, and Quick
+- Not use GUI, GPU, and Quick
 - [-- Found PythonLibs: /home/inukai/miniconda3/lib/libpython3.10.so (found suitable exact version "3.10.14")] (If miniconda3 is not installed, set "-DDOWNLOAD_MINICONDA=TRUE".)
 ```
 tar xvf AmberTools24jlmrcc.tar.bz2
@@ -139,7 +139,7 @@ cd $AMBERHOME/test
 make test.serial && make clean.test
 ```
 ### AmberTools23, Installation (Ubuntu 22.04 LTS (or WSL2), make, parallel)
-- Not use GUI, and Quick
+- Not use GUI, GPU, and Quick
 - [-- Found PythonLibs: /home/inukai/miniconda3/lib/libpython3.10.so (found suitable exact version "3.10.14")] (If miniconda3 is not installed, set "-DDOWNLOAD_MINICONDA=TRUE".)
 ```
 tar xvf AmberTools23jlmrcc.tar.bz2
@@ -201,7 +201,7 @@ cd $AMBERHOME/test
 make test.serial && make clean.test
 ```
 ### AmberTools22, Installation (Ubuntu 22.04 LTS (or WSL2), make, parallel)
-- Not use GUI, and Quick
+- Not use GUI, GPU, and Quick
 - [-- Found PythonLibs: /home/inukai/miniconda3/lib/libpython3.10.so (found suitable exact version "3.10.14")] (If miniconda3 is not installed, set "-DDOWNLOAD_MINICONDA=TRUE".)
 ```
 tar xvf AmberTools22jlmrcc.tar.bz2
