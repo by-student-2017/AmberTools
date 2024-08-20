@@ -99,6 +99,7 @@ export DO_PARALLEL="mpirun -np 8"
 make test.parallel.4proc && make clean.test
 unset DO_PARALLEL
 ```
+- sqm (=semi-empirical quantum chemistry): MNDO, MNDO/d, AM1, AM1/d, PM3, PDDG/PM3, PDDG/MNDO, RM1, PM3CARB1, PM3-MAIS, PM6, DFTB/DFTB2/DFTB3
 
 
 ## AmberTools23 (amber22) [AT23]
