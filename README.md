@@ -473,7 +473,10 @@ pinda install ambertools 18
 sudo apt update
 sudo apt -y install tcsh make gcc gfortran flex bison patch bc wget xorg-dev libz-dev libbz2-dev build-essential libopenblas-dev libarpack2-dev libnetcdf-dev libnetcdff-dev
 sudo apt -y install openmpi-bin libopenmpi-dev openssh-client python3-mpi4py python3-numpy python3-setuptools
-sudo apt -y install swig octave 
+```
+- For Ambertools24 or later
+```
+sudo apt -y install swig octave-dev guile-3.0-dev libprotobuf-dev libperl-dev
 ```
 
 
