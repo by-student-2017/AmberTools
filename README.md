@@ -38,7 +38,7 @@ echo 'export PATH=$PATH:'"$AMBERHOME/include" >> ~/.bashrc
 echo 'export PATH=$PATH:'"$AMBERHOME/dat" >> ~/.bashrc
 bash
 ```
-- test (need long time (about 2 hours))
+- test
 ```
 cd $AMBERHOME/test
 make test.serial && make clean.test
@@ -100,7 +100,7 @@ echo 'export PATH=$PATH:'"$AMBERHOME/include" >> ~/.bashrc
 echo 'export PATH=$PATH:'"$AMBERHOME/dat" >> ~/.bashrc
 bash
 ```
-- test (need long time (about 2 hours))
+- test
 ```
 cd $AMBERHOME/test
 make test.serial && make clean.test
