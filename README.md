@@ -6,6 +6,39 @@
 - I couldn't upload it because I didn't have enough storage space. Please download it directly from the link below.
 
 
+## Ubuntu 22.04 LTS
+```
+sudo apt update
+sudo apt -y install tcsh make gcc gfortran flex bison patch bc wget xorg-dev libz-dev libbz2-dev build-essential libopenblas-dev libarpack2-dev libnetcdf-dev libnetcdff-dev
+sudo apt -y install openmpi-bin libopenmpi-dev openssh-client python3-mpi4py python3-numpy python3-setuptools
+```
+- For Ambertools24 or later
+```
+sudo apt -y install swig octave-dev guile-3.0-dev libprotobuf-dev libperl-dev netcdf-bin
+```
+
+
+## PLUMED
+```
+wget https://github.com/plumed/plumed2/releases/download/v2.9.0/plumed-2.9.0.tgz
+tar zxvf plumed-2.9.0.tgz
+cd plumed-2.9.0
+./configure --prefix=/mnt/d/plumed-2.9.0/opt
+make
+make install
+```
+- Note: "make test" is failed on gfortran and gcc, etc
+### PLUMED, Environment settings
+```
+echo '# PLUMED, Environment settings' >> ~/.bashrc
+echo 'export PATH=$PATH:/mnt/d/plumed-2.9.0/opt/bin' >> ~/.bashrc
+echo 'export PATH=$PATH:/mnt/d/plumed-2.9.0/opt/lib' >> ~/.bashrc
+echo 'export PATH=$PATH:/mnt/d/plumed-2.9.0/opt/include' >> ~/.bashrc
+echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/mnt/d/plumed-2.9.0/src/lib' >> ~/.bashrc
+bash
+````
+
+
 ## AmberTools24 (amber24) [AT24]
 ```
 wget https://ambermd.org/downloads/AmberTools24_rc5.tar.bz2
@@ -467,38 +500,6 @@ wget https://gitweb-cdn-origin.gentoo.org/proj/sci.git/snapshot/sci-ambertools.t
 pip install pinda
 pinda install ambertools 18
 ```
-
-## Ubuntu 22.04 LTS
-```
-sudo apt update
-sudo apt -y install tcsh make gcc gfortran flex bison patch bc wget xorg-dev libz-dev libbz2-dev build-essential libopenblas-dev libarpack2-dev libnetcdf-dev libnetcdff-dev
-sudo apt -y install openmpi-bin libopenmpi-dev openssh-client python3-mpi4py python3-numpy python3-setuptools
-```
-- For Ambertools24 or later
-```
-sudo apt -y install swig octave-dev guile-3.0-dev libprotobuf-dev libperl-dev netcdf-bin
-```
-
-
-## PLUMED
-```
-wget https://github.com/plumed/plumed2/releases/download/v2.9.0/plumed-2.9.0.tgz
-tar zxvf plumed-2.9.0.tgz
-cd plumed-2.9.0
-./configure --prefix=/mnt/d/plumed-2.9.0/opt
-make
-make install
-```
-- Note: "make test" is failed on gfortran and gcc, etc
-### PLUMED, Environment settings
-```
-echo '# PLUMED, Environment settings' >> ~/.bashrc
-echo 'export PATH=$PATH:/mnt/d/plumed-2.9.0/opt/bin' >> ~/.bashrc
-echo 'export PATH=$PATH:/mnt/d/plumed-2.9.0/opt/lib' >> ~/.bashrc
-echo 'export PATH=$PATH:/mnt/d/plumed-2.9.0/opt/include' >> ~/.bashrc
-echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/mnt/d/plumed-2.9.0/src/lib' >> ~/.bashrc
-bash
-````
 
 
 ## cygwin
