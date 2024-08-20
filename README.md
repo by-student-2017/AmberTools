@@ -104,7 +104,7 @@ unset DO_PARALLEL
 - Note: DFT (of quick) = B3LYP, PBE0, D3MBJ, etc [DFT = BLYP, B3LYP, BP86, B97, B](https://quick-docs.readthedocs.io/en/24.3.0/user-manual.html)
 - Note: BASIS (of quick) = 6-31G**, cc-pVTZ, aug-cc-pVTZ, def2-TZVP, etc
 - Note: sander (Simulated Annealing with NMR-Derived Energy Restraints)
-- Note: QM: ADF, Gaussian, Orca, Q-Chem, MRCC, Fireball
+- Note: AMBER/QM, QM = ADF, Gaussian, Orca, Q-Chem, MRCC, or Fireball
 - Note: sebomd (Semi-Empirical Born-Oppenheimer Molecular Dynamics): NDDO (=AN1, PM3, RM1, etc)
 
 
