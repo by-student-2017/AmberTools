@@ -92,7 +92,7 @@ echo 'export PATH=$PATH:'"$AMBERHOME/include" >> ~/.bashrc
 echo 'export PATH=$PATH:'"$AMBERHOME/dat" >> ~/.bashrc
 bash
 ```
-- test (parallel)
+- test (parallel) (start 20/Aug/2024 21:40 - end ???)
 ```
 cd $AMBERHOME/test
 export DO_PARALLEL="mpirun -np 8"
