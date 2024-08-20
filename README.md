@@ -22,8 +22,8 @@ wget https://ambermd.org/downloads/AmberTools23_rc6.tar.bz2
 ```
 wget https://ambermd.org/downloads/AmberTools22jlmrcc.tar.bz2
 ```
-### AmberTools22, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, 1 GPU, python)
-- Not use MPI, OpenMP, GPU, GUI, Quick, python, miniconda
+### AmberTools22, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, python)
+- Not use MPI, GPU, GUI, Quick, python, miniconda
 - This is a very simple executable file with few dependencies, suitable for basic functionality. It has also passed testing.
 ```
 tar xvf AmberTools22jlmrcc.tar.bz2
@@ -32,7 +32,7 @@ cd amber22_src
 ./update_amber --update
 cd build
 AMBERTOOLSHOME=$(dirname $(dirname `pwd`))
-cmake $AMBERTOOLSHOME/amber22_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber22 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=FALSE -DBUILD_GUI=FALSE -DNCCL=FALSE -DCUDA=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE 2>&1 | tee cmake.log
+cmake $AMBERTOOLSHOME/amber22_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber22 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=TRUE -DBUILD_GUI=FALSE -DNCCL=FALSE -DCUDA=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE 2>&1 | tee cmake.log
 make -j8 && make install
 
 source $AMBERTOOLSHOME/amber22/amber.sh
