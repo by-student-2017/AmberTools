@@ -476,7 +476,7 @@ sudo apt -y install openmpi-bin libopenmpi-dev openssh-client python3-mpi4py pyt
 ```
 - For Ambertools24 or later
 ```
-sudo apt -y install swig octave-dev guile-3.0-dev libprotobuf-dev libperl-dev
+sudo apt -y install swig octave-dev guile-3.0-dev libprotobuf-dev libperl-dev netcdf-bin
 ```
 
 
