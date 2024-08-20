@@ -47,7 +47,7 @@ bash
 - test (need long time (about 2 hours))
 ```
 cd $AMBERHOME/test
-make -j8 test.serial && make clean.test
+make test.serial && make clean.test
 ```
 ### AmberTools22, Installation (Ubuntu 22.04 LTS (or WSL2), make, parallel)
 - Not use GUI, Quick, miniconda
@@ -69,6 +69,12 @@ echo 'export PATH=$PATH:'"$AMBERHOME/lib" >> ~/.bashrc
 echo 'export PATH=$PATH:'"$AMBERHOME/include" >> ~/.bashrc
 echo 'export PATH=$PATH:'"$AMBERHOME/dat" >> ~/.bashrc
 bash
+```
+- test (parallel)
+```
+cd $AMBERHOME/test
+export DO_PARALLEL="mpirun -np 4"
+make test.parallel.4proc && make clean.test
 ```
 
 
