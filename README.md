@@ -2,10 +2,6 @@
 - AmberTools is a free, useful standalone package and a prerequisite for installing Amber itself. The AmberTools suite is free of charge, and its components are mostly released under the GNU General Public License (GPL). A few components are included that are in the public domain or which have other, open-source, licenses. The libsander and libpbsa libraries use the LGPL license. (see https://ambermd.org/GetAmber.php#ambertools)
 
 
-## Note
-- I couldn't upload it because I didn't have enough storage space. Please download it directly from the link below.
-
-
 ## Ubuntu 22.04 LTS (packages)
 ```
 sudo apt update
@@ -37,6 +33,10 @@ echo 'export PATH=$PATH:/mnt/d/plumed-2.9.0/opt/include' >> ~/.bashrc
 echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/mnt/d/plumed-2.9.0/src/lib' >> ~/.bashrc
 bash
 ````
+
+
+## Note
+- I couldn't upload it because I didn't have enough storage space. Please download it directly from the link below.
 
 
 ## AmberTools24 (amber24) [AT24]
