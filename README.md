@@ -103,6 +103,8 @@ unset DO_PARALLEL
 - Note: quick (QUantum Interaction Computational Kernel) ab initio quantum chemistry): HF, UHF, DFT (LDA, GGA, Hybrid-GGA, e.g., e B3LYP/cc-pVDZ), UDFT, vdW (Grimme)
 - Note: DFT = B3LYP, PBE0, D3MBJ, etc [DFT = BLYP, B3LYP, BP86, B97, B](https://quick-docs.readthedocs.io/en/24.3.0/user-manual.html)
 - Note: BASIS = 6-31G**, cc-pVTZ, aug-cc-pVTZ, def2-TZVP, etc
+- Note: sander (Simulated Annealing with NMR-Derived Energy Restraints)
+- Note: QM: ADF, Gaussian, Orca, Q-Chem, MRCC, Fireball
 
 
 ## AmberTools23 (amber22) [AT23]
