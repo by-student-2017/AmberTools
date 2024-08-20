@@ -74,7 +74,7 @@ bash
 cd $AMBERHOME/test
 make test.serial && make clean.test
 ```
-### AmberTools24, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, GPU, no check)
+### AmberTools24, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, GPU (=CUDA), no check)
 - Not use MPI
 - This is a very simple executable file with few dependencies, suitable for basic functionality. It has also passed testing.
 ```
