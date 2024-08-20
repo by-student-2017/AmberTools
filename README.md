@@ -100,7 +100,9 @@ make test.parallel.4proc && make clean.test
 unset DO_PARALLEL
 ```
 - Note: sqm (=semi-empirical quantum chemistry): MNDO, MNDO/d (=MNDOD), AM1 (AM1, AM1-D* or AM1-DH+), AM1/d (=AM1D), PM3, PDDG/PM3, PDDG/MNDO, RM1, PM3CARB1, PM3-MAIS, PM6 (PM6, PM6-D, or PM6-DH+), DFTB2 (mio-1-1), DFTB3 (3ob-3-1)
-- Note: quick (=ab initio quantum chemistry): 
+- Note: quick (QUantum Interaction Computational Kernel) ab initio quantum chemistry): HF, UHF, DFT (LDA, GGA, Hybrid-GGA, e.g., e B3LYP/cc-pVDZ), UDFT, vdW (Grimme)
+- Note: DFT = B3LYP, PBE0, D3MBJ, etc [DFT = BLYP, B3LYP, BP86, B97, B](https://quick-docs.readthedocs.io/en/24.3.0/user-manual.html)
+- Note: BASIS = 6-31G**, cc-pVTZ, aug-cc-pVTZ, def2-TZVP, etc
 
 
 ## AmberTools23 (amber22) [AT23]
