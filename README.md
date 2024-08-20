@@ -17,7 +17,8 @@ wget https://ambermd.org/downloads/AmberTools24_rc5.tar.bz2
 wget https://ambermd.org/downloads/AmberTools23_rc6.tar.bz2
 ```
 ### AmberTools23, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, 1 CPU (serial))
-- Not use MPI, GPU, GUI, Quick, and miniconda
+- Not use MPI, GPU, GUI, and Quick
+- [-- Found PythonLibs: /home/inukai/miniconda3/lib/libpython3.10.so (found suitable exact version "3.10.14")]
 - This is a very simple executable file with few dependencies, suitable for basic functionality. It has also passed testing.
 ```
 tar xvf AmberTools23jlmrcc.tar.bz2
@@ -44,7 +45,8 @@ cd $AMBERHOME/test
 make test.serial && make clean.test
 ```
 ### AmberTools23, Installation (Ubuntu 22.04 LTS (or WSL2), make, parallel)
-- Not use GUI, Quick, and miniconda
+- Not use GUI, and Quick
+- [-- Found PythonLibs: /home/inukai/miniconda3/lib/libpython3.10.so (found suitable exact version "3.10.14")]
 ```
 tar xvf AmberTools23jlmrcc.tar.bz2
 cd amber22_src
@@ -78,7 +80,8 @@ make test.parallel.4proc && make clean.test
 wget https://ambermd.org/downloads/AmberTools22jlmrcc.tar.bz2
 ```
 ### AmberTools22, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, 1 CPU (serial))
-- Not use MPI, GPU, GUI, Quick, and miniconda
+- Not use MPI, GPU, GUI, and Quick
+- [-- Found PythonLibs: /home/inukai/miniconda3/lib/libpython3.10.so (found suitable exact version "3.10.14")]
 - This is a very simple executable file with few dependencies, suitable for basic functionality. It has also passed testing.
 ```
 tar xvf AmberTools22jlmrcc.tar.bz2
@@ -105,7 +108,8 @@ cd $AMBERHOME/test
 make test.serial && make clean.test
 ```
 ### AmberTools22, Installation (Ubuntu 22.04 LTS (or WSL2), make, parallel)
-- Not use GUI, Quick, and miniconda
+- Not use GUI, and Quick
+- [-- Found PythonLibs: /home/inukai/miniconda3/lib/libpython3.10.so (found suitable exact version "3.10.14")]
 ```
 tar xvf AmberTools22jlmrcc.tar.bz2
 cd amber22_src
