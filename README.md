@@ -49,9 +49,8 @@ bash
 cd $AMBERHOME/test
 make -j8 test.serial && make clean.test
 ```
-### AmberTools22, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, python)
+### AmberTools22, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, GPU (CUDA()
 - Not use GUI, Quick, miniconda
-- This is a very simple executable file with few dependencies, suitable for basic functionality. It has also passed testing.
 ```
 tar xvf AmberTools22jlmrcc.tar.bz2
 cd amber22_src
