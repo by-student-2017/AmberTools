@@ -22,7 +22,8 @@ wget https://ambermd.org/downloads/AmberTools23_rc6.tar.bz2
 ```
 wget https://ambermd.org/downloads/AmberTools22jlmrcc.tar.bz2
 ```
-### AmberTools22, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, 1 CPU, No:[MPI,OpenMP,GPU,GUI,Quick,python,miniconda3])
+### AmberTools22, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, 1 CPU)
+- Not use MPI, OpenMP, GPU, GUI, Quick, python, miniconda
 ```
 tar xvf AmberTools22jlmrcc.tar.bz2
 cd amber22_src
