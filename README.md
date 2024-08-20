@@ -10,6 +10,62 @@
 ```
 wget https://ambermd.org/downloads/AmberTools24_rc5.tar.bz2
 ```
+### AmberTools24, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, 1 CPU (serial))
+- Not use MPI, GPU, GUI, Quick, python, and miniconda
+- This is a very simple executable file with few dependencies, suitable for basic functionality. It has also passed testing.
+```
+tar xvf AmberTools24jlmrcc.tar.bz2
+cd amber24_src
+./update_amber --check-updates
+./update_amber --update
+cd build
+AMBERTOOLSHOME=$(dirname $(dirname `pwd`))
+cmake $AMBERTOOLSHOME/amber24_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber24 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=FALSE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=FALSE -DDOWNLOAD_MINICONDA=FALSE -Wno-dev 2>&1 | tee cmake.log
+make -j8 && make install
+
+source $AMBERTOOLSHOME/amber24/amber.sh
+echo "# Ambertools24 (amber24) environment settings" >> ~/.bashrc
+echo "source $AMBERHOME/amber.sh" >> ~/.bashrc
+echo 'export PATH=$PATH:'"$AMBERHOME/bin" >> ~/.bashrc
+echo 'export PATH=$PATH:'"$AMBERHOME/lib" >> ~/.bashrc
+echo 'export PATH=$PATH:'"$AMBERHOME/include" >> ~/.bashrc
+echo 'export PATH=$PATH:'"$AMBERHOME/dat" >> ~/.bashrc
+bash
+```
+- test
+```
+cd $AMBERHOME/test
+make test.serial && make clean.test
+```
+### AmberTools24, Installation (Ubuntu 22.04 LTS (or WSL2), make, parallel)
+- Not use GUI, and Quick
+- [-- Found PythonLibs: /home/inukai/miniconda3/lib/libpython3.10.so (found suitable exact version "3.10.14")] (If miniconda3 is not installed, set "-DDOWNLOAD_MINICONDA=TRUE".)
+```
+tar xvf AmberTools24jlmrcc.tar.bz2
+cd amber24_src
+./update_amber --check-updates
+./update_amber --update
+cd build
+AMBERTOOLSHOME=$(dirname $(dirname `pwd`))
+cmake $AMBERTOOLSHOME/amber24_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber24 -DCOMPILER=GNU -DMPI=TRUE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE 2>&1 | tee cmake.log
+make -j8 && make install
+
+source $AMBERTOOLSHOME/amber24/amber.sh
+echo "# Ambertools24 (amber24) environment settings" >> ~/.bashrc
+echo "source $AMBERHOME/amber.sh" >> ~/.bashrc
+echo 'export PATH=$PATH:'"$AMBERHOME/bin" >> ~/.bashrc
+echo 'export PATH=$PATH:'"$AMBERHOME/lib" >> ~/.bashrc
+echo 'export PATH=$PATH:'"$AMBERHOME/include" >> ~/.bashrc
+echo 'export PATH=$PATH:'"$AMBERHOME/dat" >> ~/.bashrc
+bash
+```
+- test (parallel)
+```
+cd $AMBERHOME/test
+export DO_PARALLEL="mpirun -np 8"
+make test.parallel.4proc && make clean.test
+```
+- cmake $AMBERTOOLSHOME/amber22_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber22 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=FALSE -DBUILD_GUI=FALSE -DCUDA=FALSE -DOPENACC=FALSE -DOPENMM=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DTEST_PARALLEL=FALSE -DDOWNLOAD_MINICONDA=FALSE -DBUILD_PYTHON=FALSE -DOPENCL=FALSE -DROCM=FALSE -DNOX11=FALSE -DHDF5=FALSE -DCP2K=FALSE -DPLUMED=FALSE -DQUIP=FALSE -DLAPACK=FALSE -DSCALAPACK=FALSE -DBLA_VENDOR=OpenBLAS -DOpenBLAS_DIR="/usr/lib/x86_64-linux-gnu/libopenblas.a" -DFFTW=FALSE -DFFTW3=FALSE -DFFTW3_ROOT="/usr/lib/x86_64-linux-gnu/libfftw3.a" -DNETCDF=TRUE -DNETCDF_ROOT="/usr/lib/x86_64-linux-gnu/libnetcdff.a" -Wno-dev
 
 
 ## AmberTools23 (amber22) [AT23]
@@ -71,7 +127,6 @@ cd $AMBERHOME/test
 export DO_PARALLEL="mpirun -np 8"
 make test.parallel.4proc && make clean.test
 ```
-- cmake $AMBERTOOLSHOME/amber22_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber22 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=FALSE -DBUILD_GUI=FALSE -DCUDA=FALSE -DOPENACC=FALSE -DOPENMM=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DTEST_PARALLEL=FALSE -DDOWNLOAD_MINICONDA=FALSE -DBUILD_PYTHON=FALSE -DOPENCL=FALSE -DROCM=FALSE -DNOX11=FALSE -DHDF5=FALSE -DCP2K=FALSE -DPLUMED=FALSE -DQUIP=FALSE -DLAPACK=FALSE -DSCALAPACK=FALSE -DBLA_VENDOR=OpenBLAS -DOpenBLAS_DIR="/usr/lib/x86_64-linux-gnu/libopenblas.a" -DFFTW=FALSE -DFFTW3=FALSE -DFFTW3_ROOT="/usr/lib/x86_64-linux-gnu/libfftw3.a" -DNETCDF=TRUE -DNETCDF_ROOT="/usr/lib/x86_64-linux-gnu/libnetcdff.a" -Wno-dev
 
 
 ## AmberTools22 [AT22]
