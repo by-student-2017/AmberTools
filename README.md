@@ -80,14 +80,19 @@ cd amber20_src
 ./update_amber --check-updates
 ./update_amber --update
 cd build
-AMBERHOME=$(dirname $(dirname `pwd`))
-cmake $AMBERHOME/amber20_src -DCMAKE_INSTALL_PREFIX=$AMBERHOME/amber20 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=FALSE -DBUILD_GUI=FALSE -DCUDA=FALSE -DINSTALL_TESTS=TRUE -DTEST_PARALLEL=FALSE -DDOWNLOAD_MINICONDA=FALSE -DBUILD_PYTHON=FALSE -Wno-dev
-source $AMBERHOME/amber20_src/amber.sh
-make -j8
-make install
+AMBERTOOLSHOME=$(dirname $(dirname `pwd`))
+cmake $AMBERTOOLSHOME/amber20_src_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber20 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=TRUE -DBUILD_GUI=FALSE -DNCCL=FALSE -DCUDA=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE 2>&1 | tee cmake.log
+make -j8 && make install
 
-#export PATH=$AMBERHOME/amber20/bin:$PATH
-#make test
+source $AMBERTOOLSHOME/amber20/amber.sh
+export PATH=$AMBERHOME/bin:$PATH
+
+cd $AMBERHOME/test
+make test.serial && make clean.test
+
+echo '# Ambertools20 (amber20) environment settings' >> ~/.bashrc
+echo 'export PATH=$PATH:'"$AMBERHOME/bin" >> ~/.bashrc
+bash
 ```
 - Memo: cmake $AMBERHOME/amber20_src -DCMAKE_INSTALL_PREFIX=$AMBERHOME/amber22 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=FALSE -DBUILD_GUI=FALSE -DCUDA=FALSE -DOPENACC=FALSE -DOPENMM=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DTEST_PARALLEL=FALSE -DDOWNLOAD_MINICONDA=FALSE -DBUILD_PYTHON=FALSE -DOPENCL=FALSE -DROCM=FALSE -DNOX11=FALSE -DHDF5=FALSE -DCP2K=FALSE -DPLUMED=FALSE -DQUIP=FALSE -DLAPACK=FALSE -DSCALAPACK=FALSE -DBLA_VENDOR=OpenBLAS -DOpenBLAS_DIR="/usr/lib/x86_64-linux-gnu/libopenblas.a" -DFFTW=FALSE -DFFTW3=FALSE -DFFTW3_ROOT="/usr/lib/x86_64-linux-gnu/libfftw3.a" -DNETCDF=TRUE -DNETCDF_ROOT="/usr/lib/x86_64-linux-gnu/libnetcdff.a" -Wno-dev
 ### AmberTools20 (amber20), Installation (WSL2, ubuntu 22.04, failed)
