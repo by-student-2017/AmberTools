@@ -138,6 +138,7 @@ unset DO_PARALLEL
 ### AmberTools24, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, GPU (=CUDA), no check)
 - Not use MPI
 - This is a very simple executable file with few dependencies, suitable for basic functionality. It has also passed testing.
+- The steps for compiling on this GPU after performing the above two compilations (single and parallel) are shown below.
 - Due to an error with the GPU, it is necessary to temporarily use gcc-10 and g++-10. Compile again for the problematic GPU.
 ```
 tar xvf AmberTools24_rc5.tar.bz2
@@ -155,7 +156,7 @@ sudo update-alternatives --config gcc
 sudo update-alternatives --config g++
 
 cmake $AMBER_PREFIX/amber24_src -DCMAKE_INSTALL_PREFIX=$AMBER_PREFIX/amber24 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=FALSE -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=${CUDA_HOME} -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=TRUE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE -Bbuild -Wno-dev 2>&1 | tee cmake.log
-#cd build
+cd build
 make -j8 && make install
 
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 11
