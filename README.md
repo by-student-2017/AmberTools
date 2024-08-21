@@ -59,6 +59,7 @@ cd amber24_src
 ./update_amber --update
 cd build
 AMBER_PREFIX=$(dirname $(dirname `pwd`))
+mkdir build_cpu_serial && cd build_cpu_serial
 cmake $AMBER_PREFIX/amber24_src -DCMAKE_INSTALL_PREFIX=$AMBER_PREFIX/amber24 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=FALSE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=FALSE -DDOWNLOAD_MINICONDA=FALSE -Wno-dev 2>&1 | tee cmake.log
 make -j8 && make install
 
@@ -114,7 +115,7 @@ cd amber24_src
 ./update_amber --update
 cd build
 AMBER_PREFIX=$(dirname $(dirname `pwd`))
-
+mkdir build_gpu_serial && cd build_gpu_serial
 cmake $AMBER_PREFIX/amber24_src -DCMAKE_INSTALL_PREFIX=$AMBER_PREFIX/amber24 -DCOMPILER=GNU -DMPI=TRUE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=TRUE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE -Bbuild -Wno-dev 2>&1 | tee cmake.log
 make -j8 && make install
 
@@ -158,6 +159,7 @@ cd amber24_src
 ./update_amber --update
 cd build
 AMBER_PREFIX=$(dirname $(dirname `pwd`))
+mkdir build_cpu_parallel && cd build_cpu_parallel
 cmake $AMBER_PREFIX/amber24_src -DCMAKE_INSTALL_PREFIX=$AMBER_PREFIX/amber24 -DCOMPILER=GNU -DMPI=TRUE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE 2>&1 | tee cmake.log
 make -j8 && make install
 
@@ -200,6 +202,7 @@ cd amber22_src
 ./update_amber --update
 cd build
 AMBER_PREFIX=$(dirname $(dirname `pwd`))
+mkdir build_cpu_serial && cd build_cpu_serial
 cmake $AMBER_PREFIX/amber22_src -DCMAKE_INSTALL_PREFIX=$AMBER_PREFIX/amber22 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=FALSE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=FALSE -DDOWNLOAD_MINICONDA=FALSE -Wno-dev 2>&1 | tee cmake.log
 make -j8 && make install
 
@@ -227,6 +230,7 @@ cd amber22_src
 ./update_amber --update
 cd build
 AMBER_PREFIX=$(dirname $(dirname `pwd`))
+mkdir build_cpu_parallel && cd build_cpu_parallel
 cmake $AMBER_PREFIX/amber22_src -DCMAKE_INSTALL_PREFIX=$AMBER_PREFIX/amber22 -DCOMPILER=GNU -DMPI=TRUE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE 2>&1 | tee cmake.log
 make -j8 && make install
 
@@ -262,6 +266,7 @@ cd amber22_src
 ./update_amber --update
 cd build
 AMBER_PREFIX=$(dirname $(dirname `pwd`))
+mkdir build_cpu_serial && cd build_cpu_serial
 cmake $AMBER_PREFIX/amber22_src -DCMAKE_INSTALL_PREFIX=$AMBER_PREFIX/amber22 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=FALSE -DDOWNLOAD_MINICONDA=FALSE 2>&1 | tee cmake.log
 make -j8 && make install
 
@@ -289,6 +294,7 @@ cd amber22_src
 ./update_amber --update
 cd build
 AMBER_PREFIX=$(dirname $(dirname `pwd`))
+mkdir build_cpu_parallel && cd build_cpu_parallel
 cmake $AMBER_PREFIX/amber22_src -DCMAKE_INSTALL_PREFIX=$AMBER_PREFIX/amber22 -DCOMPILER=GNU -DMPI=TRUE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE 2>&1 | tee cmake.log
 make -j8 && make install
 
