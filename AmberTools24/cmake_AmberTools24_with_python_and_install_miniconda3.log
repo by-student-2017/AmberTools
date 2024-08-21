@@ -1,0 +1,496 @@
+-- **************************************************************************
+-- Starting configuration of Amber version 24.0.0...
+-- CMake Version: 3.29.3
+-- For how to use this build system, please read this wiki:
+--     http://ambermd.org/pmwiki/pmwiki.php/Main/CMake
+-- For a list of important CMake variables, check here:
+--     http://ambermd.org/pmwiki/pmwiki.php/Main/CMake-Common-Options
+-- **************************************************************************
+-- Setting C compiler to gcc
+-- Setting CXX compiler to g++
+-- Setting Fortran compiler to gfortran
+-- Amber source not found, only building AmberTools
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- The Fortran compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting Fortran compiler ABI info
+-- Detecting Fortran compiler ABI info - done
+-- Check for working Fortran compiler: /usr/bin/gfortran - skipped
+-- Testing if stdlib.h can be included...
+-- Testing if stdlib.h can be included... yes
+-- Found OpenMP_C: -fopenmp (found version "4.5")
+-- Found OpenMP_CXX: -fopenmp (found version "4.5")
+-- Found OpenMP_Fortran: -fopenmp (found version "4.5")
+-- Found MPI_C: /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so (found version "3.1")
+-- Found MPI_CXX: /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi_cxx.so (found version "3.1")
+-- Found MPI_Fortran: /usr/lib/x86_64-linux-gnu/libmpi_usempif08.so (found version "3.1")
+-- Found MPI: TRUE (found version "3.1")
+-- MPI C Compiler: /usr/bin/mpicc
+-- MPI CXX Compiler: /usr/bin/mpicxx
+-- MPI Fortran Compiler: /usr/bin/mpif90
+-- If these are not the correct MPI wrappers, then set MPI_<language>_COMPILER to the correct wrapper and reconfigure.
+-- Found PythonInterp: /home/inukai/miniconda3/bin/python (found version "3.10.14")
+-- Python version 3.10 -- OK
+-- Found PythonLibs: /home/inukai/miniconda3/lib/libpython3.10.so (found version "3.10.14")
+-- Checking for Python package numpy -- found
+-- Checking for Python package scipy -- found
+-- Checking for Python package matplotlib -- found
+-- Checking for Python package setuptools -- found
+-- Checking for Python package tkinter -- found
+-- Checking for Python package distutils.sysconfig -- found
+-- Python relative site-packages location: <prefix>/lib/python3.10/site-packages
+-- Looking for dlopen in dl
+-- Looking for dlopen in dl - found
+-- Found FLEX: /usr/bin/flex (found version "2.6.4")
+-- Found BISON: /usr/bin/bison (found version "3.8.2")
+-- Found X11: /usr/include
+-- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so
+-- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so - found
+-- Looking for gethostbyname
+-- Looking for gethostbyname - found
+-- Looking for connect
+-- Looking for connect - found
+-- Looking for remove
+-- Looking for remove - found
+-- Looking for shmat
+-- Looking for shmat - found
+-- Looking for IceConnectionNumber in ICE
+-- Looking for IceConnectionNumber in ICE - found
+-- Found Perl: /usr/bin/perl (found version "5.34.0")
+-- Found perl make: /usr/bin/make
+-- Perl modules well be installed to AMBERHOME/lib/perl
+-- [1;34mRunning updater...[0m 
+-- >>> Preparing to apply updates... please wait. 
+-- >>> No new updates available for AmberTools 24 
+-- [1;34mUpdater done.  If you want to install updates, then set the APPLY_UPDATES variable to true.[0m 
+-- Checking whether to use built-in libraries...
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Looking for complex.h
+-- Looking for complex.h - found
+-- Looking for rl_initialize in libreadline.so
+-- Looking for rl_initialize in libreadline.so - found
+-- Found Readline: /usr/include
+-- Unable to locate MKL_HOME for your system.  To use MKL, set MKL_HOME to point to your MKL installation location.
+-- Found OpenMP_C: -fopenmp (found version "4.5")
+-- Found OpenMP_CXX: -fopenmp (found version "4.5")
+-- Found OpenMP_Fortran: -fopenmp (found version "4.5")
+-- Performing Test SUPPORTS_NO_AS_NEEDED
+-- Performing Test SUPPORTS_NO_AS_NEEDED - Success
+-- Performing Test CMath_LINKS_WITHOUT_M
+-- Performing Test CMath_LINKS_WITHOUT_M - Failed
+-- Performing Test CMath_LINKS_WITH_M
+-- Performing Test CMath_LINKS_WITH_M - Success
+-- Found CMath: /usr/lib/x86_64-linux-gnu/libm.so
+-- Could NOT find MKL (missing: MKL_INTERFACE_LIBRARY MKL_GFORTRAN_INTERFACE_LIBRARY MKL_GNU_THREADING_LIBRARY MKL_CORE_LIBRARY MKL_WORKS MKL_FORTRAN_WORKS) 
+-- hints given to look for KMMD in DIR: 
+-- found KMMD?:   KMMD_LIB-NOTFOUND
+-- found INCLUDES?: 
+-- Did not find an external KMMD library, should be able to use bundled. If you have a custom version then set the path with -DKMMD_DIR (missing: KMMD_LIB) 
+-- Looking for fftw_execute in libfftw3.so
+-- Looking for fftw_execute in libfftw3.so - found
+-- Looking for fftw_cleanup in libfftw3.so
+-- Looking for fftw_cleanup in libfftw3.so - found
+-- Looking for fftw_mpi_init in libfftw3_mpi.so
+-- Looking for fftw_mpi_init in libfftw3_mpi.so - found
+-- Found FFTW: /usr/lib/x86_64-linux-gnu/libfftw3.so
+-- Looking for nc_strerror in netcdf
+-- Looking for nc_strerror in netcdf - found
+-- Performing Test NetCDF_F90_WORKS
+-- Performed Test NetCDF_F90_WORKS - Success
+-- Found NetCDF: 1  found components: F77 F90
+-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4")
+-- Could NOT find XBLAS (missing: XBLAS_LIBRARY XBLAS_C_WORKS XBLAS_FORTRAN_WORKS) 
+-- Looking for Fortran sgemm
+-- Looking for Fortran sgemm - found
+-- A library with BLAS API found.
+-- Looking for Fortran cheev
+-- Looking for Fortran cheev - found
+-- A library with LAPACK API found.
+-- Looking for dsaupd in libarpack.so
+-- Looking for dsaupd in libarpack.so - found
+-- Looking for arsecond in libarpack.so
+-- Looking for arsecond in libarpack.so - not found
+-- Detailed information about why this check failed can be found in /mnt/c/Users/manab/amber24_src/build/build/CMakeFiles/CMakeError.log
+-- Found ARPACK: /usr/lib/x86_64-linux-gnu/libarpack.so
+-- Could NOT find PnetCDF (missing: PnetCDF_LIBRARY PnetCDF_INCLUDE_DIR PnetCDF_WORKS) 
+-- Could not find some or all of the five main APBS libraries. Please set APBS_GENERIC_LIB, APBS_ROUTINES_LIB, 
+APBS_PMGC_LIB, APBS_MG_LIB, APBS_MC_LIB, APBS_FEM_LIB, UMFPACK_LIB, and APBS_MALOC_LIB to point to the correct libraries (missing: APBS_API_LIB APBS_ROUTINES_LIB APBS_MG_LIB APBS_PMGC_LIB APBS_GENERIC_LIB APBS_FEM_LIB APBS_MC_LIB UMFPACK_LIB APBS_MALOC_LIB APBS_WORKS APBS_INCLUDES) 
+-- Could NOT find JNI (missing: JAVA_INCLUDE_PATH JAVA_INCLUDE_PATH2 AWT) 
+-- Could NOT find PUPIL (missing: PUPIL_MAIN_LIB PUPIL_BLIND_LIB PUPIL_TIME_LIB JNI_FOUND PUPIL_WORKS) 
+-- Could NOT find LIO (missing: LIO_G2G_LIBRARY LIO_AMBER_LIBRARY LIO_WORKS) 
+-- Looking for plumed_symbol_table_reexport in libplumed.so libplumedKernel.so
+-- Looking for plumed_symbol_table_reexport in libplumed.so libplumedKernel.so - found
+-- Found PLUMED: /mnt/d/plumed-2.9.0/opt/lib/libplumed.so (Required is at least version "2.5")
+-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.2.11")
+-- Found BZip2: /usr/lib/x86_64-linux-gnu/libbz2.so (found version "1.0.8")
+-- Looking for BZ2_bzCompressInit
+-- Looking for BZ2_bzCompressInit - found
+-- Checking for Python package mpi4py -- not found
+-- Checking for perl module Chemistry::Mol
+-- Checking for perl module Chemistry::Mol - failed
+-- Checking for perl module ExtUtils::MakeMaker
+-- Checking for perl module ExtUtils::MakeMaker - found at /usr/share/perl/5.34/ExtUtils/MakeMaker.pm
+-- Failed to find Perl modules: Chemistry::Mol (missing: PERLMODULES_CHEMISTRY_MOL_MODULE) 
+-- Could NOT find Boost: missing: thread system program_options iostreams regex timer chrono filesystem graph (found /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0"))
+-- Could NOT find MBX (missing: MBX_DIR)
+-- Could not find MBX.  To locate it, add its install dir to the prefix path.
+-- Could NOT find tng_io (missing: tng_io_DIR)
+-- Could not find tng_io.  To locate it, add its install dir to the prefix path.
+-- KMMD not added to 3RDPARTY_SUBDIRS :
+--   : ucpp-1.3
+-- System arpack is missing the arsecond_ function.  That function will be built inside amber
+-- Performing Test SUPPORTS_WNO_UNUSED_LOCAL_TYPEDEFS
+-- Performing Test SUPPORTS_WNO_UNUSED_LOCAL_TYPEDEFS - Success
+-- Looking for mkstemp
+-- Looking for mkstemp - found
+-- Generating amber source scripts
+-- Configuring subdirs...
+-- Detecting Fortran/C Interface
+-- Detecting Fortran/C Interface - Found GLOBAL and MODULE mangling
+-- Verifying Fortran/C Compiler Compatibility
+-- Verifying Fortran/C Compiler Compatibility - Success
+-- Looking for fpu_control.h
+-- Looking for fpu_control.h - found
+-- Looking for alloca
+-- Looking for alloca - found
+-- Looking for MPI_MODE_RDWR
+-- Looking for MPI_MODE_RDWR - found
+-- Looking for MPI_COMBINER_DUP
+-- Looking for MPI_COMBINER_DUP - not found
+-- Looking for MPI_COMBINER_DUP as #define or enum
+-- Looking for MPI_COMBINER_DUP as #define or enum - found
+-- Looking for MPI_COMBINER_HVECTOR_INTEGER
+-- Looking for MPI_COMBINER_HVECTOR_INTEGER - not found
+-- Looking for MPI_COMBINER_HVECTOR_INTEGER as #define or enum
+-- Looking for MPI_COMBINER_HVECTOR_INTEGER as #define or enum - not found
+-- Looking for MPI_COMBINER_HINDEXED_INTEGER
+-- Looking for MPI_COMBINER_HINDEXED_INTEGER - not found
+-- Looking for MPI_COMBINER_HINDEXED_INTEGER as #define or enum
+-- Looking for MPI_COMBINER_HINDEXED_INTEGER as #define or enum - not found
+-- Looking for MPI_COMBINER_SUBARRAY
+-- Looking for MPI_COMBINER_SUBARRAY - not found
+-- Looking for MPI_COMBINER_SUBARRAY as #define or enum
+-- Looking for MPI_COMBINER_SUBARRAY as #define or enum - found
+-- Looking for MPI_COMBINER_DARRAY
+-- Looking for MPI_COMBINER_DARRAY - not found
+-- Looking for MPI_COMBINER_DARRAY as #define or enum
+-- Looking for MPI_COMBINER_DARRAY as #define or enum - found
+-- Looking for MPI_COMBINER_RESIZED
+-- Looking for MPI_COMBINER_RESIZED - not found
+-- Looking for MPI_COMBINER_RESIZED as #define or enum
+-- Looking for MPI_COMBINER_RESIZED as #define or enum - found
+-- Looking for MPI_COMBINER_STRUCT_INTEGER
+-- Looking for MPI_COMBINER_STRUCT_INTEGER - not found
+-- Looking for MPI_COMBINER_STRUCT_INTEGER as #define or enum
+-- Looking for MPI_COMBINER_STRUCT_INTEGER as #define or enum - not found
+-- Looking for MPI_COMBINER_INDEXED_BLOCK
+-- Looking for MPI_COMBINER_INDEXED_BLOCK - not found
+-- Looking for MPI_COMBINER_INDEXED_BLOCK as #define or enum
+-- Looking for MPI_COMBINER_INDEXED_BLOCK as #define or enum - found
+-- Looking for MPI_COMBINER_F90_REAL
+-- Looking for MPI_COMBINER_F90_REAL - not found
+-- Looking for MPI_COMBINER_F90_REAL as #define or enum
+-- Looking for MPI_COMBINER_F90_REAL as #define or enum - found
+-- Looking for MPI_COMBINER_F90_INTEGER
+-- Looking for MPI_COMBINER_F90_INTEGER - not found
+-- Looking for MPI_COMBINER_F90_INTEGER as #define or enum
+-- Looking for MPI_COMBINER_F90_INTEGER as #define or enum - found
+-- Looking for MPI_COMBINER_F90_COMPLEX
+-- Looking for MPI_COMBINER_F90_COMPLEX - not found
+-- Looking for MPI_COMBINER_F90_COMPLEX as #define or enum
+-- Looking for MPI_COMBINER_F90_COMPLEX as #define or enum - found
+-- Looking for MPI_CHARACTER
+-- Looking for MPI_CHARACTER - found
+-- Looking for MPI_REAL
+-- Looking for MPI_REAL - found
+-- Looking for MPI_INTEGER
+-- Looking for MPI_INTEGER - found
+-- Looking for MPI_DOUBLE_PRECISION
+-- Looking for MPI_DOUBLE_PRECISION - found
+-- Looking for MPI_INTEGER1
+-- Looking for MPI_INTEGER1 - found
+-- Looking for MPI_INTEGER2
+-- Looking for MPI_INTEGER2 - found
+-- Looking for MPI_INTEGER4
+-- Looking for MPI_INTEGER4 - found
+-- Looking for MPI_INTEGER8
+-- Looking for MPI_INTEGER8 - found
+-- Looking for MPI_INTEGER16
+-- Looking for MPI_INTEGER16 - not found
+-- Looking for MPI_INTEGER16 as #define or enum
+-- Looking for MPI_INTEGER16 as #define or enum - not found
+-- Looking for MPI_REAL4
+-- Looking for MPI_REAL4 - found
+-- Looking for MPI_REAL8
+-- Looking for MPI_REAL8 - found
+-- Looking for MPI_REAL16
+-- Looking for MPI_REAL16 - found
+-- Looking for MPI_COMPLEX8
+-- Looking for MPI_COMPLEX8 - found
+-- Looking for MPI_COMPLEX16
+-- Looking for MPI_COMPLEX16 - found
+-- Looking for MPI_COMPLEX32
+-- Looking for MPI_COMPLEX32 - found
+-- Looking for MPI_UB
+-- Looking for MPI_UB - not found
+-- Looking for MPI_UB as #define or enum
+-- Looking for MPI_UB as #define or enum - not found
+-- Looking for MPI_LB
+-- Looking for MPI_LB - not found
+-- Looking for MPI_LB as #define or enum
+-- Looking for MPI_LB as #define or enum - not found
+-- Looking for strerror
+-- Looking for strerror - found
+-- Looking for MPI_Request_get_status
+-- Looking for MPI_Request_get_status - found
+-- Looking for MPI_Type_dup
+-- Looking for MPI_Type_dup - found
+-- Looking for MPI_Info_dup
+-- Looking for MPI_Info_dup - found
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of ptrdiff_t
+-- Check size of ptrdiff_t - done
+-- Check size of ssize_t
+-- Check size of ssize_t - done
+-- Check size of uchar
+-- Check size of uchar - failed
+-- Check size of MPI_Offset
+-- Check size of MPI_Offset - failed
+-- Check size of short
+-- Check size of short - done
+-- Check size of int
+-- Check size of int - done
+-- Check size of long
+-- Check size of long - done
+-- Check size of float
+-- Check size of float - done
+-- Check size of double
+-- Check size of double - done
+-- Check size of size_t
+-- Check size of size_t - done
+-- Check size of off_t
+-- Check size of off_t - done
+-- Check size of ((struct stat*)0)->st_blksize
+-- Check size of ((struct stat*)0)->st_blksize - failed
+-- Check size of signed char
+-- Check size of signed char - done
+-- Looking for alloca.h
+-- Looking for alloca.h - found
+-- Looking for stdlib.h
+-- Looking for stdlib.h - found
+-- Looking for mpio.h
+-- Looking for mpio.h - not found
+-- Looking for inttypes.h
+-- Looking for inttypes.h - found
+-- NLopt version 2.7.1
+-- Looking for getopt.h
+-- Looking for getopt.h - found
+-- Looking for unistd.h
+-- Looking for unistd.h - found
+-- Looking for time.h
+-- Looking for time.h - found
+-- Looking for sys/time.h
+-- Looking for sys/time.h - found
+-- Looking for getpid
+-- Looking for getpid - found
+-- Looking for syscall
+-- Looking for syscall - found
+-- Looking for isinf
+-- Looking for isinf - found
+-- Looking for isnan
+-- Looking for isnan - found
+-- Looking for gettimeofday
+-- Looking for gettimeofday - found
+-- Looking for qsort_r
+-- Looking for qsort_r - found
+-- Looking for time
+-- Looking for time - found
+-- Looking for copysign
+-- Looking for copysign - found
+-- Looking for getopt
+-- Looking for getopt - found
+-- Check size of uint32_t
+-- Check size of uint32_t - done
+-- Check size of unsigned int
+-- Check size of unsigned int - done
+-- Check size of unsigned long
+-- Check size of unsigned long - done
+-- Looking for sqrt in m
+-- Looking for sqrt in m - found
+-- Looking for fpclassify
+-- Looking for fpclassify - TRUE
+-- Performing Test HAVE_THREAD_LOCAL_STORAGE
+-- Performing Test HAVE_THREAD_LOCAL_STORAGE - Success
+-- Performing Test HAVE_THREAD_LOCAL_STORAGE
+-- Performing Test HAVE_THREAD_LOCAL_STORAGE - Failed
+-- Looking for __cplusplus
+-- Looking for __cplusplus - found
+-- Performing Test SUPPORTS_STDCXX11
+-- Performing Test SUPPORTS_STDCXX11 - Success
+-- Found PythonLibs: /home/inukai/miniconda3/lib/libpython3.10.so (found suitable exact version "3.10.14")
+-- Found NumPy: /home/inukai/.local/lib/python3.10/site-packages/numpy/core/include (found version "1.26.4")
+-- Found Guile: /usr/bin/guile (found version "3.0.7")
+-- Found SWIG: /usr/bin/swig4.0 (found version "4.0.2")
+-- Performing Test UNDEFINED_SYMBOLS_ALLOWED - Failed
+-- Found Octave: /usr/bin/octave (found version "6.4.0")
+-- Could NOT find Matlab (missing: Matlab_INCLUDE_DIRS Matlab_MEX_LIBRARY Matlab_MEX_EXTENSION Matlab_ROOT_DIR Matlab_MX_LIBRARY MX_LIBRARY MAIN_PROGRAM) (found version "NOTFOUND")
+CMake Warning at /home/inukai/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.29/Modules/CPack.cmake:507 (message):
+  CPack.cmake has already been included!!
+Call Stack (most recent call first):
+  AmberTools/src/nlopt/CMakeLists.txt:368 (include)
+
+
+-- Reticulating splines...
+-- Looking for sscanf
+-- Looking for sscanf - found
+-- Check size of long double
+-- Check size of long double - done
+-- Found C++11 support: cxx_std_11
+-- Looking for getline
+-- Looking for getline - found
+-- Performing Test SUPPORTS_WNO_UNUSED_RESULT
+-- Performing Test SUPPORTS_WNO_UNUSED_RESULT - Success
+-- Performing Test OMP_ATOMIC_ADDITION_SUPPORT
+-- Performing Test OMP_ATOMIC_ADDITION_SUPPORT - Success
+-- Looking for backtrace
+-- Looking for backtrace - found
+-- Looking for sys/param.h
+-- Looking for sys/param.h - found
+-- Looking for sys/dir.h
+-- Looking for sys/dir.h - found
+-- Looking for dirent.h
+-- Looking for dirent.h - found
+-- Looking for string.h
+-- Looking for string.h - found
+-- Looking for strings.h
+-- Looking for strings.h - found
+-- Looking for pwd.h
+-- Looking for pwd.h - found
+-- Looking for stdbool.h
+-- Looking for stdbool.h - found
+-- Looking for Windows.h
+-- Looking for Windows.h - not found
+-- Looking for X11/Xmd.h
+-- Looking for X11/Xmd.h - found
+-- Looking for toupper
+-- Looking for toupper - found
+-- Looking for tolower
+-- Looking for tolower - found
+-- Check size of BOOL
+-- Check size of BOOL - failed
+-- Check size of _Bool
+-- Check size of _Bool - done
+If you can't see the following build report, then you need to turn off COLOR_CMAKE_MESSAGES
+-- [1;34m**************************************************************************[0m 
+--                               [4;29mBuild Report[0m 
+--                              [1;4;35mCompiler Flags:[0m 
+-- [1;35mC[0m [1;29mNo-Opt:         [0m [29m -Wall -Wno-unused-function -Wno-unknown-pragmas -Wno-unused-variable -Wno-unused-but-set-variable -fcommon[0m [1;34m-O0[0m 
+-- [1;35mC[0m [1;29mOptimized:      [0m [29m -Wall -Wno-unused-function -Wno-unknown-pragmas -Wno-unused-variable -Wno-unused-but-set-variable -fcommon[0m [1;34m-O3 -mtune=native[0m 
+-- 
+-- [32mCXX[0m [1;29mNo-Opt:       [0m [29m -Wall -Wno-unused-function -Wno-unknown-pragmas -Wno-unused-local-typedefs -Wno-unused-variable -Wno-unused-but-set-variable[0m [1;34m-O0[0m 
+-- [32mCXX[0m [1;29mOptimized:    [0m [29m -Wall -Wno-unused-function -Wno-unknown-pragmas -Wno-unused-local-typedefs -Wno-unused-variable -Wno-unused-but-set-variable[0m [1;34m-O3 -mtune=native[0m 
+-- 
+-- [1;31mFortran[0m [1;29mNo-Opt:   [0m [29m -Wall -Wno-tabs -Wno-unused-function -ffree-line-length-none -Wno-unused-dummy-argument -Wno-unused-variable -fallow-argument-mismatch -fno-inline-arg-packing[0m [1;34m-O0[0m 
+-- [1;31mFortran[0m [1;29mOptimized:[0m [29m -Wall -Wno-tabs -Wno-unused-function -ffree-line-length-none -Wno-unused-dummy-argument -Wno-unused-variable -fallow-argument-mismatch -fno-inline-arg-packing[0m [1;34m-O3 -mtune=native[0m 
+-- 
+--                           [1;4;35m3rd Party Libraries[0m 
+-- ---building bundled: ----------------------------------------------------- 
+-- [32mucpp[0m [1;29m- used as a preprocessor for the NAB compiler[0m 
+-- [32mxblas[0m [1;29m- used for high-precision linear algebra calculations[0m 
+-- [32mboost[0m [1;29m- C++ support library[0m 
+-- [32mkmmd[0m [1;29m- Machine-learning molecular dynamics[0m 
+-- [32mtng_io[0m [1;29m- enables GROMACS tng trajectory input in cpptraj[0m 
+-- [32mnlopt[0m [1;29m- used to perform nonlinear optimizations[0m 
+-- [32mmpi4py[0m [1;29m- MPI support library for MMPBSA.py[0m 
+-- [32mpnetcdf[0m [1;29m- used by cpptraj for parallel trajectory output[0m 
+-- [32mperlmol[0m [1;29m- chemistry library used by FEW[0m 
+-- ---using installed: ------------------------------------------------------ 
+-- [33mblas[0m [1;29m- for fundamental linear algebra calculations[0m 
+-- [33mlapack[0m [1;29m- for fundamental linear algebra calculations[0m 
+-- [33marpack[0m [1;29m- for fundamental linear algebra calculations[0m 
+-- [33mnetcdf[0m [1;29m- for creating trajectory data files[0m 
+-- [33mnetcdf-fortran[0m [1;29m- for creating trajectory data files from Fortran[0m 
+-- [33mfftw[0m [1;29m- used to do Fourier transforms very quickly[0m 
+-- [33mreadline[0m [1;29m- enables an interactive terminal in cpptraj[0m 
+-- [33mzlib[0m [1;29m- for various compression and decompression tasks[0m 
+-- [33mlibbz2[0m [1;29m- for bzip2 compression in cpptraj[0m 
+-- [33mplumed[0m [1;29m- used as an alternate MD backend for Sander[0m 
+-- [33mlibm[0m [1;29m- for fundamental math routines if they are not contained in the C library[0m 
+-- ---disabled: ------------------------------------------------ 
+-- [1;31mc9x-complex[0m [1;29m- used as a support library on systems that do not have C99 complex.h support[0m 
+-- [1;31mprotobuf[0m [1;29m- protocol buffers library, used for communication with external software in QM/MM[0m 
+-- [1;31mlio[0m [1;29m- used by Sander to run certain QM routines on the GPU[0m 
+-- [1;31mapbs[0m [1;29m- used by Sander as an alternate Poisson-Boltzmann equation solver[0m 
+-- [1;31mpupil[0m [1;29m- used by Sander as an alternate user interface[0m 
+-- [1;31mmkl[0m [1;29m- alternate implementation of lapack and blas that is tuned for speed[0m 
+-- [1;31mmbx[0m [1;29m- computes energies and forces for pmemd with the MB-pol model[0m 
+-- [1;31mlibtorch[0m [1;29m- enables libtorch C++ library for tensor computation and dynamic neural networks[0m 
+
+--                                [1;4;35mFeatures:[0m 
+-- MPI:                               [32mON[0m 
+-- MVAPICH2-GDR for GPU-GPU comm.:    [1;31mOFF[0m 
+-- OpenMP:                            [32mON[0m 
+-- CUDA:                              [1;31mOFF[0m 
+-- NCCL:                              [1;31mOFF[0m 
+-- Build Shared Libraries:            [32mON[0m 
+-- Build GUI Interfaces:              [1;31mOFF[0m 
+-- Build Python Programs:             [32mON[0m 
+--  -Python Interpreter:              [1;34m/home/inukai/miniconda3/bin/python[0m [33m(version 3.10)[0m 
+-- Build Perl Programs:               [32mON[0m 
+-- Build configuration:               [1;34mRELEASE[0m 
+-- Target Processor:                  [33mx86_64[0m 
+-- Build Documentation:               [32mON[0m 
+-- Sander Variants:                   [1;34mnormal LES API LES-API MPI LES-MPI QUICK-MPI[0m 
+-- Install location:                  [1;34m/mnt/c/Users/manab/amber24/[0m 
+-- Installation of Tests:             [32mON[0m 
+
+--                               [1;4;35mCompilers:[0m 
+-- [36m        C:[0m [33mGNU 11.4.0[0m [1;31m(/usr/bin/gcc)[0m 
+-- [36m      CXX:[0m [33mGNU 11.4.0[0m [1;31m(/usr/bin/g++)[0m 
+-- [36m  Fortran:[0m [33mGNU 11.4.0[0m [1;31m(/usr/bin/gfortran)[0m 
+
+--                              [1;4;35mBuilding Tools:[0m 
+-- addles ambpdb antechamber cew cifparse cphstats cpptraj emil etc fe-toolkit few gbnsr6 gem.pmemd kmmd leap lib mdgx mm_pbsa mmpbsa_py moft nabc ndiff-2.00 nfe-umbrella-slice nmode nmr_aux packmol_memgen paramfit parmed pbsa pdb4amber pymsmt pysander pytraj quick reduce rism sander saxs sebomd sff sqm xray xtalutil 
+
+--                            [1;4;35mNOT Building Tools:[0m 
+-- [1;31mtcpb-cpp - BUILD_TCPB is not enabled[0m 
+-- [1;31mtcpb-cpp/pytcpb - BUILD_TCPB is not enabled[0m 
+-- [1;31mreaxff_puremd - BUILD_REAXFF_PUREMD is not enabled[0m 
+-- [1;31mgpu_utils - Not included in AmberTools[0m 
+-- [1;31mpmemd - Not included in AmberTools[0m 
+-- [1;34m**************************************************************************[0m 
+-- Environment resource files are provided to set the proper environment
+-- variables to use AMBER and AmberTools. This is required to run any Python
+-- programs (like MMPBSA.py, ParmEd, MCPB.py, and pytraj)
+-- 
+-- If you use a Bourne shell (e.g., bash, sh, zsh, etc.), source the
+-- /mnt/c/Users/manab/amber24//amber.sh file in your shell. Consider adding the line
+--   test -f /mnt/c/Users/manab/amber24//amber.sh && source /mnt/c/Users/manab/amber24//amber.sh
+-- to your startup file (e.g., ~/.bashrc)
+-- 
+-- If you use a C shell (e.g., csh, tcsh), source the
+-- /mnt/c/Users/manab/amber24//amber.csh file in your shell. Consider adding the line
+--   test -f /mnt/c/Users/manab/amber24//amber.csh && source /mnt/c/Users/manab/amber24//amber.csh
+-- to your startup file (e.g., ~/.cshrc)
+-- 
+-- Amber will be installed to /mnt/c/Users/manab/amber24/
+-- Configuring done (536.0s)
+-- Generating done (28.4s)
+-- Build files have been written to: /mnt/c/Users/manab/amber24_src/build/build
