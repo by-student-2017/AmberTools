@@ -58,11 +58,11 @@ cd amber24_src
 ./update_amber --check-updates
 ./update_amber --update
 cd build
-AMBERTOOLSHOME=$(dirname $(dirname `pwd`))
-cmake $AMBERTOOLSHOME/amber24_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber24 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=FALSE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=FALSE -DDOWNLOAD_MINICONDA=FALSE -Wno-dev 2>&1 | tee cmake.log
+AMBER_PREFIX=$(dirname $(dirname `pwd`))
+cmake $AMBER_PREFIX/amber24_src -DCMAKE_INSTALL_PREFIX=$AMBER_PREFIX/amber24 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=FALSE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=FALSE -DDOWNLOAD_MINICONDA=FALSE -Wno-dev 2>&1 | tee cmake.log
 make -j8 && make install
 
-source $AMBERTOOLSHOME/amber24/amber.sh
+source $AMBER_PREFIX/amber24/amber.sh
 echo "# Ambertools24 (amber24) environment settings" >> ~/.bashrc
 echo "source $AMBERHOME/amber.sh" >> ~/.bashrc
 echo 'export PATH=$PATH:'"$AMBERHOME/bin" >> ~/.bashrc
@@ -85,11 +85,11 @@ cd amber24_src
 ./update_amber --check-updates
 ./update_amber --update
 cd build
-AMBERTOOLSHOME=$(dirname $(dirname `pwd`))
-cmake $AMBERTOOLSHOME/amber24_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber24 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=TRUE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE -Wno-dev 2>&1 | tee cmake.log
+AMBER_PREFIX=$(dirname $(dirname `pwd`))
+cmake $AMBER_PREFIX/amber24_src -DCMAKE_INSTALL_PREFIX=$AMBER_PREFIX/amber24 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=TRUE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE -Wno-dev 2>&1 | tee cmake.log
 make -j8 && make install
 
-source $AMBERTOOLSHOME/amber24/amber.sh
+source $AMBER_PREFIX/amber24/amber.sh
 echo "# Ambertools24 (amber24) environment settings" >> ~/.bashrc
 echo "source $AMBERHOME/amber.sh" >> ~/.bashrc
 echo 'export PATH=$PATH:'"$AMBERHOME/bin" >> ~/.bashrc
@@ -113,9 +113,9 @@ cd amber24_src
 ./update_amber --check-updates
 ./update_amber --update
 cd build
-AMBERTOOLSHOME=$(dirname $(dirname `pwd`))
+AMBER_PREFIX=$(dirname $(dirname `pwd`))
 
-cmake $AMBERTOOLSHOME/amber24_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber24 -DCOMPILER=GNU -DMPI=TRUE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=TRUE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE -Bbuild -Wno-dev 2>&1 | tee cmake.log
+cmake $AMBER_PREFIX/amber24_src -DCMAKE_INSTALL_PREFIX=$AMBER_PREFIX/amber24 -DCOMPILER=GNU -DMPI=TRUE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=TRUE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE -Bbuild -Wno-dev 2>&1 | tee cmake.log
 make -j8 && make install
 
 export CUDA_HOME="/usr/lib/cuda"
@@ -125,7 +125,7 @@ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-10 10
 sudo update-alternatives --config gcc
 sudo update-alternatives --config g++
 
-cmake $AMBERTOOLSHOME/amber24_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber24 -DCOMPILER=GNU -DMPI=TRUE -DOPENMP=TRUE -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=${CUDA_HOME} -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=TRUE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE -Bbuild -Wno-dev 2>&1 | tee cmake.log
+cmake $AMBER_PREFIX/amber24_src -DCMAKE_INSTALL_PREFIX=$AMBER_PREFIX/amber24 -DCOMPILER=GNU -DMPI=TRUE -DOPENMP=TRUE -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=${CUDA_HOME} -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=TRUE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE -Bbuild -Wno-dev 2>&1 | tee cmake.log
 make -j8 && make install
 
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 11
@@ -133,7 +133,7 @@ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-11 11
 sudo update-alternatives --config gcc
 sudo update-alternatives --config g++
 
-source $AMBERTOOLSHOME/amber24/amber.sh
+source $AMBER_PREFIX/amber24/amber.sh
 echo "# Ambertools24 (amber24) environment settings" >> ~/.bashrc
 echo "source $AMBERHOME/amber.sh" >> ~/.bashrc
 echo 'export PATH=$PATH:'"$AMBERHOME/bin" >> ~/.bashrc
@@ -157,11 +157,11 @@ cd amber24_src
 ./update_amber --check-updates
 ./update_amber --update
 cd build
-AMBERTOOLSHOME=$(dirname $(dirname `pwd`))
-cmake $AMBERTOOLSHOME/amber24_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber24 -DCOMPILER=GNU -DMPI=TRUE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE 2>&1 | tee cmake.log
+AMBER_PREFIX=$(dirname $(dirname `pwd`))
+cmake $AMBER_PREFIX/amber24_src -DCMAKE_INSTALL_PREFIX=$AMBER_PREFIX/amber24 -DCOMPILER=GNU -DMPI=TRUE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE 2>&1 | tee cmake.log
 make -j8 && make install
 
-source $AMBERTOOLSHOME/amber24/amber.sh
+source $AMBER_PREFIX/amber24/amber.sh
 echo "# Ambertools24 (amber24) environment settings" >> ~/.bashrc
 echo "source $AMBERHOME/amber.sh" >> ~/.bashrc
 echo 'export PATH=$PATH:'"$AMBERHOME/bin" >> ~/.bashrc
@@ -199,11 +199,11 @@ cd amber22_src
 ./update_amber --check-updates
 ./update_amber --update
 cd build
-AMBERTOOLSHOME=$(dirname $(dirname `pwd`))
-cmake $AMBERTOOLSHOME/amber22_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber22 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=FALSE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=FALSE -DDOWNLOAD_MINICONDA=FALSE -Wno-dev 2>&1 | tee cmake.log
+AMBER_PREFIX=$(dirname $(dirname `pwd`))
+cmake $AMBER_PREFIX/amber22_src -DCMAKE_INSTALL_PREFIX=$AMBER_PREFIX/amber22 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=FALSE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=FALSE -DDOWNLOAD_MINICONDA=FALSE -Wno-dev 2>&1 | tee cmake.log
 make -j8 && make install
 
-source $AMBERTOOLSHOME/amber22/amber.sh
+source $AMBER_PREFIX/amber22/amber.sh
 echo "# Ambertools23 (amber22) environment settings" >> ~/.bashrc
 echo "source $AMBERHOME/amber.sh" >> ~/.bashrc
 echo 'export PATH=$PATH:'"$AMBERHOME/bin" >> ~/.bashrc
@@ -226,11 +226,11 @@ cd amber22_src
 ./update_amber --check-updates
 ./update_amber --update
 cd build
-AMBERTOOLSHOME=$(dirname $(dirname `pwd`))
-cmake $AMBERTOOLSHOME/amber22_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber22 -DCOMPILER=GNU -DMPI=TRUE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE 2>&1 | tee cmake.log
+AMBER_PREFIX=$(dirname $(dirname `pwd`))
+cmake $AMBER_PREFIX/amber22_src -DCMAKE_INSTALL_PREFIX=$AMBER_PREFIX/amber22 -DCOMPILER=GNU -DMPI=TRUE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE 2>&1 | tee cmake.log
 make -j8 && make install
 
-source $AMBERTOOLSHOME/amber22/amber.sh
+source $AMBER_PREFIX/amber22/amber.sh
 echo "# Ambertools23 (amber22) environment settings" >> ~/.bashrc
 echo "source $AMBERHOME/amber.sh" >> ~/.bashrc
 echo 'export PATH=$PATH:'"$AMBERHOME/bin" >> ~/.bashrc
@@ -261,11 +261,11 @@ cd amber22_src
 ./update_amber --check-updates
 ./update_amber --update
 cd build
-AMBERTOOLSHOME=$(dirname $(dirname `pwd`))
-cmake $AMBERTOOLSHOME/amber22_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber22 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=FALSE -DDOWNLOAD_MINICONDA=FALSE 2>&1 | tee cmake.log
+AMBER_PREFIX=$(dirname $(dirname `pwd`))
+cmake $AMBER_PREFIX/amber22_src -DCMAKE_INSTALL_PREFIX=$AMBER_PREFIX/amber22 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=FALSE -DDOWNLOAD_MINICONDA=FALSE 2>&1 | tee cmake.log
 make -j8 && make install
 
-source $AMBERTOOLSHOME/amber22/amber.sh
+source $AMBER_PREFIX/amber22/amber.sh
 echo "# Ambertools22 (amber22) environment settings" >> ~/.bashrc
 echo "source $AMBERHOME/amber.sh" >> ~/.bashrc
 echo 'export PATH=$PATH:'"$AMBERHOME/bin" >> ~/.bashrc
@@ -288,11 +288,11 @@ cd amber22_src
 ./update_amber --check-updates
 ./update_amber --update
 cd build
-AMBERTOOLSHOME=$(dirname $(dirname `pwd`))
-cmake $AMBERTOOLSHOME/amber22_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber22 -DCOMPILER=GNU -DMPI=TRUE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE 2>&1 | tee cmake.log
+AMBER_PREFIX=$(dirname $(dirname `pwd`))
+cmake $AMBER_PREFIX/amber22_src -DCMAKE_INSTALL_PREFIX=$AMBER_PREFIX/amber22 -DCOMPILER=GNU -DMPI=TRUE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE 2>&1 | tee cmake.log
 make -j8 && make install
 
-source $AMBERTOOLSHOME/amber22/amber.sh
+source $AMBER_PREFIX/amber22/amber.sh
 echo "# Ambertools22 (amber22) environment settings" >> ~/.bashrc
 echo "source $AMBERHOME/amber.sh" >> ~/.bashrc
 echo 'export PATH=$PATH:'"$AMBERHOME/bin" >> ~/.bashrc
@@ -322,11 +322,11 @@ cd amber20_src
 ./update_amber --check-updates
 ./update_amber --update
 cd build
-AMBERTOOLSHOME=$(dirname $(dirname `pwd`))
-cmake $AMBERTOOLSHOME/amber20_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber20 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE 2>&1 | tee cmake.log
+AMBER_PREFIX=$(dirname $(dirname `pwd`))
+cmake $AMBER_PREFIX/amber20_src -DCMAKE_INSTALL_PREFIX=$AMBER_PREFIX/amber20 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE 2>&1 | tee cmake.log
 make -j8 && make install
 
-source $AMBERTOOLSHOME/amber20/amber.sh
+source $AMBER_PREFIX/amber20/amber.sh
 echo "# Ambertools21 (amber20) environment settings" >> ~/.bashrc
 echo "source $AMBERHOME/amber.sh" >> ~/.bashrc
 echo 'export PATH=$PATH:'"$AMBERHOME/bin" >> ~/.bashrc
@@ -348,11 +348,11 @@ cd amber20_src
 ./update_amber --check-updates
 ./update_amber --update
 cd build
-AMBERTOOLSHOME=$(dirname $(dirname `pwd`))
-cmake $AMBERTOOLSHOME/amber20_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber20 -DCOMPILER=GNU -DMPI=TRUE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE 2>&1 | tee cmake.log
+AMBER_PREFIX=$(dirname $(dirname `pwd`))
+cmake $AMBER_PREFIX/amber20_src -DCMAKE_INSTALL_PREFIX=$AMBER_PREFIX/amber20 -DCOMPILER=GNU -DMPI=TRUE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE 2>&1 | tee cmake.log
 make -j8 && make install
 
-source $AMBERTOOLSHOME/amber20/amber.sh
+source $AMBER_PREFIX/amber20/amber.sh
 echo "# Ambertools21 (amber20) environment settings" >> ~/.bashrc
 echo "source $AMBERHOME/amber.sh" >> ~/.bashrc
 echo 'export PATH=$PATH:'"$AMBERHOME/bin" >> ~/.bashrc
@@ -397,11 +397,11 @@ cd amber20_src
 ./update_amber --check-updates
 ./update_amber --update
 cd build
-AMBERTOOLSHOME=$(dirname $(dirname `pwd`))
-cmake $AMBERTOOLSHOME/amber20_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber20 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=FALSE -DDOWNLOAD_MINICONDA=FALSE 2>&1 | tee cmake.log
+AMBER_PREFIX=$(dirname $(dirname `pwd`))
+cmake $AMBER_PREFIX/amber20_src -DCMAKE_INSTALL_PREFIX=$AMBER_PREFIX/amber20 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=FALSE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=FALSE -DDOWNLOAD_MINICONDA=FALSE 2>&1 | tee cmake.log
 make -j8 && make install
 
-source $AMBERTOOLSHOME/amber20/amber.sh
+source $AMBER_PREFIX/amber20/amber.sh
 echo "# Ambertools20 (amber20) environment settings" >> ~/.bashrc
 echo "source $AMBERHOME/amber.sh" >> ~/.bashrc
 echo 'export PATH=$PATH:'"$AMBERHOME/bin" >> ~/.bashrc
