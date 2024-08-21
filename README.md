@@ -185,7 +185,8 @@ make test.serial && make clean.test
 - Note: DFT (of quick) = B3LYP, PBE0, D3MBJ, etc [DFT = BLYP, B3LYP, BP86, B97, B](https://quick-docs.readthedocs.io/en/24.3.0/user-manual.html)
 - Note: BASIS (of quick) = 6-31G**, cc-pVTZ, aug-cc-pVTZ, def2-TZVP, etc
 - Note: sander (Simulated Annealing with NMR-Derived Energy Restraints)
-- Note: AMBER/QM, QM = ADF, Gaussian, Orca, Q-Chem, MRCC, or Fireball
+- Note: Mechanical and electrostatic embedding: AMBER/QM, QM = ADF, Gaussian, Orca, Q-Chem, TeraChem, QUICK, MRCC, or Fireball
+- Note: Mechanical embedding: ADF, GAMESS-US, NWChem
 - Note: sebomd (Semi-Empirical Born-Oppenheimer Molecular Dynamics): NDDO (=AN1, PM3, RM1, etc)
 
 
@@ -251,6 +252,14 @@ export DO_PARALLEL="mpirun -np 8"
 make test.parallel.4proc && make clean.test
 unset DO_PARALLEL
 ```
+- Note: sqm (=semi-empirical quantum chemistry): MNDO, MNDO/d (=MNDOD), AM1 (AM1, AM1-D* or AM1-DH+), AM1/d (=AM1D), PM3, PDDG/PM3, PDDG/MNDO, RM1, PM3CARB1, PM3-MAIS, PM6 (PM6, PM6-D, or PM6-DH+), DFTB2 (mio-1-1), DFTB3 (3ob-3-1)
+- Note: quick (QUantum Interaction Computational Kernel) ab initio quantum chemistry): HF, UHF, DFT (LDA, GGA, Hybrid-GGA, e.g., e B3LYP/cc-pVDZ), UDFT, vdW (Grimme)
+- Note: DFT (of quick) = B3LYP, PBE0, D3MBJ, etc [DFT = BLYP, B3LYP, BP86, B97, B](https://quick-docs.readthedocs.io/en/24.3.0/user-manual.html)
+- Note: BASIS (of quick) = 6-31G**, cc-pVTZ, aug-cc-pVTZ, def2-TZVP, etc
+- Note: sander (Simulated Annealing with NMR-Derived Energy Restraints)
+- Note: Mechanical and electrostatic embedding: AMBER/QM, QM = ADF, Gaussian, Orca, Q-Chem, TeraChem, QUICK, MRCC, or Fireball
+- Note: Mechanical embedding: ADF, GAMESS-US, NWChem
+- Note: sebomd (Semi-Empirical Born-Oppenheimer Molecular Dynamics): NDDO (=AN1, PM3, RM1, etc)
 
 
 ## AmberTools22 [AT22]
@@ -314,6 +323,14 @@ cd $AMBERHOME/test
 export DO_PARALLEL="mpirun -np 8"
 make test.parallel.4proc && make clean.test
 ```
+- Note: sqm (=semi-empirical quantum chemistry): MNDO, MNDO/d (=MNDOD), AM1 (AM1, AM1-D* or AM1-DH+), AM1/d (=AM1D), PM3, PDDG/PM3, PDDG/MNDO, RM1, PM3CARB1, PM3-MAIS, PM6 (PM6, PM6-D, or PM6-DH+), DFTB2 (mio-1-1), DFTB3 (3ob-3-1)
+- Note: quick (QUantum Interaction Computational Kernel) ab initio quantum chemistry): HF, UHF, DFT (LDA, GGA, Hybrid-GGA, e.g., e B3LYP/cc-pVDZ), UDFT, vdW (Grimme)
+- Note: DFT (of quick) = B3LYP, PBE0, D3MBJ, etc [DFT = BLYP, B3LYP, BP86, B97, B](https://quick-docs.readthedocs.io/en/24.3.0/user-manual.html)
+- Note: BASIS (of quick) = 6-31G**, cc-pVTZ, aug-cc-pVTZ, def2-TZVP, etc
+- Note: sander (Simulated Annealing with NMR-Derived Energy Restraints)
+- Note: Mechanical and electrostatic embedding: AMBER/QM, QM = ADF, Gaussian, Orca, Q-Chem, TeraChem, QUICK, MRCC, or Fireball
+- Note: Mechanical embedding: ADF, GAMESS-US, NWChem
+- Note: sebomd (Semi-Empirical Born-Oppenheimer Molecular Dynamics): NDDO (=AN1, PM3, RM1, etc)
 
 
 ## AmberTools21 (amber20) [AT21]
@@ -660,6 +677,8 @@ netcdf 4.9.2-1
 - [TU1] https://amber.tkanai-lab.org/ (Japanese)
 - [ATT1] https://amber.tkanai-lab.org/TutorialB4/index.htm, https://www.tkanai-lab.org/wp/wp-content/uploads/2017/09/antechmber-jp.pdf (Japanese)
 - [ATT2] https://oosakik.hatenablog.com/entry/2019/11/19/144858
+- [ATT3] https://amberhub.chpc.utah.edu/tutorials/
+- 
 - [acpype] https://github.com/alanwilter/acpype
 - [WC1] http://jswails.wikidot.com/windows-cygwin
 - [CWM1] https://github.com/X-Ability/CygwinWM/
