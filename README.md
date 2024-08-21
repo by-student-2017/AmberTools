@@ -177,7 +177,8 @@ bash
 - test (about 1 hours)
 ```
 cd $AMBERHOME/test
-make test.cuda.serial && make clean.test
+#make test.cuda.serial && make clean.test
+make test.serial && make clean.test
 ```
 - Note: sqm (=semi-empirical quantum chemistry): MNDO, MNDO/d (=MNDOD), AM1 (AM1, AM1-D* or AM1-DH+), AM1/d (=AM1D), PM3, PDDG/PM3, PDDG/MNDO, RM1, PM3CARB1, PM3-MAIS, PM6 (PM6, PM6-D, or PM6-DH+), DFTB2 (mio-1-1), DFTB3 (3ob-3-1)
 - Note: quick (QUantum Interaction Computational Kernel) ab initio quantum chemistry): HF, UHF, DFT (LDA, GGA, Hybrid-GGA, e.g., e B3LYP/cc-pVDZ), UDFT, vdW (Grimme)
