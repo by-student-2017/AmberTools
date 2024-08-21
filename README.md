@@ -87,6 +87,7 @@ cd amber24_src
 ./update_amber --update
 cd build
 AMBER_PREFIX=$(dirname $(dirname `pwd`))
+mkdir build_serial && cd build_serial
 cmake $AMBER_PREFIX/amber24_src -DCMAKE_INSTALL_PREFIX=$AMBER_PREFIX/amber24 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=TRUE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE -Wno-dev 2>&1 | tee cmake.log
 make -j8 && make install
 
