@@ -14,6 +14,7 @@ sudo apt -y install swig octave-dev guile-3.0-dev libprotobuf-dev libperl-dev ne
 ```
 - GPU
 ```
+sudo apt -y install g++-11
 sudo apt -y install g++-10
 sudo apt -y install nvidia-cuda-toolkit libnvidia-ml-dev
 ```
@@ -113,8 +114,19 @@ cd amber24_src
 cd build
 AMBERTOOLSHOME=$(dirname $(dirname `pwd`))
 export CUDA_HOME="/usr/lib/cuda"
-CXX=g++-10 CC=gcc-10 cmake $AMBERTOOLSHOME/amber24_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber24 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=FALSE -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=${CUDA_HOME} -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=TRUE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE -DCMAKE_CUDA_HOST_COMPILER=/usr/bin/g++-10 -Bbuild -Wno-dev 2>&1 | tee cmake.log
+
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 10
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-10 10
+sudo update-alternatives --config gcc
+sudo update-alternatives --config g++
+
+cmake $AMBERTOOLSHOME/amber24_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber24 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=FALSE -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=${CUDA_HOME} -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=TRUE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE -DCMAKE_CUDA_HOST_COMPILER=/usr/bin/g++-10 -Bbuild -Wno-dev 2>&1 | tee cmake.log
 make -j8 && make install
+
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 11
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-11 11
+sudo update-alternatives --config gcc
+sudo update-alternatives --config g++
 
 source $AMBERTOOLSHOME/amber24/amber.sh
 echo "# Ambertools24 (amber24) environment settings" >> ~/.bashrc
