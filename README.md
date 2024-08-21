@@ -174,7 +174,7 @@ echo 'export PATH=$PATH:'"$AMBERHOME/dat" >> ~/.bashrc
 bash
 ```
 - Note (https://github.com/stotko/stdgpu/issues/337, https://github.com/NVlabs/instant-ngp/issues/119): Error: /usr/include/c++/11/bits/std_function.h:435:145: CMake Error at pbsa.cuda_generated_cuda_pb.cu.o.RELEASE.cmake:278 (message):
-- test (about 1 hours)
+- test (about 3 hours)
 ```
 cd $AMBERHOME/test
 #make test.cuda.serial && make clean.test
