@@ -122,16 +122,16 @@ export CUDA_HOME="/usr/lib/cuda"
 
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 10
 sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-10 10
-#sudo update-alternatives --config gcc
-#sudo update-alternatives --config g++
+sudo update-alternatives --config gcc
+sudo update-alternatives --config g++
 
 cmake $AMBERTOOLSHOME/amber24_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber24 -DCOMPILER=GNU -DMPI=TRUE -DOPENMP=TRUE -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=${CUDA_HOME} -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=TRUE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE -Bbuild -Wno-dev 2>&1 | tee cmake.log
 make -j8 && make install
 
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 11
 sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-11 11
-#sudo update-alternatives --config gcc
-#sudo update-alternatives --config g++
+sudo update-alternatives --config gcc
+sudo update-alternatives --config g++
 
 source $AMBERTOOLSHOME/amber24/amber.sh
 echo "# Ambertools24 (amber24) environment settings" >> ~/.bashrc
