@@ -103,9 +103,10 @@ bash
 cd $AMBERHOME/test
 make test.serial && make clean.test
 ```
-### AmberTools24, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, GPU (=CUDA), maybe failed)
+### AmberTools24, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, GPU (=CUDA), no check)
 - Not use MPI
 - This is a very simple executable file with few dependencies, suitable for basic functionality. It has also passed testing.
+- Due to an error with the GPU, it is necessary to temporarily use gcc-10 and g++-10. Compile again for the problematic GPU.
 ```
 tar xvf AmberTools24jlmrcc.tar.bz2
 cd amber24_src
@@ -115,12 +116,15 @@ cd build
 AMBERTOOLSHOME=$(dirname $(dirname `pwd`))
 export CUDA_HOME="/usr/lib/cuda"
 
+cmake $AMBERTOOLSHOME/amber24_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber24 -DCOMPILER=GNU -DMPI=TRUE -DOPENMP=TRUE -DCUDA=FALSE -DCUDA_TOOLKIT_ROOT_DIR=${CUDA_HOME} -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=TRUE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE -DCMAKE_CUDA_HOST_COMPILER=/usr/bin/g++-10 -Bbuild -Wno-dev 2>&1 | tee cmake.log
+make -j8 && make install
+
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 10
 sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-10 10
 #sudo update-alternatives --config gcc
 #sudo update-alternatives --config g++
 
-cmake $AMBERTOOLSHOME/amber24_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber24 -DCOMPILER=GNU -DMPI=FALSE -DOPENMP=FALSE -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=${CUDA_HOME} -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=TRUE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE -DCMAKE_CUDA_HOST_COMPILER=/usr/bin/g++-10 -Bbuild -Wno-dev 2>&1 | tee cmake.log
+cmake $AMBERTOOLSHOME/amber24_src -DCMAKE_INSTALL_PREFIX=$AMBERTOOLSHOME/amber24 -DCOMPILER=GNU -DMPI=TRUE -DOPENMP=TRUE -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=${CUDA_HOME} -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=TRUE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=TRUE -DDOWNLOAD_MINICONDA=FALSE -DCMAKE_CUDA_HOST_COMPILER=/usr/bin/g++-10 -Bbuild -Wno-dev 2>&1 | tee cmake.log
 make -j8 && make install
 
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 11
