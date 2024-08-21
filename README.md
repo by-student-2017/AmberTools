@@ -139,7 +139,7 @@ unset DO_PARALLEL
 - Not use MPI
 - This is a very simple executable file with few dependencies, suitable for basic functionality. It has also passed testing.
 - The steps for compiling on this GPU after performing the above two compilations (single and parallel) are shown below.
-- Due to an error with the GPU, it is necessary to temporarily use gcc-10 and g++-10. Compile again for the problematic GPU.
+- Due to an error with the GPU, it is necessary to temporarily use gcc-10 and g++-10. Compile again for the problematic GPU (stotko/stdgpu#337, NVlabs/instant-ngp#119).
 ```
 tar xvf AmberTools24_rc5.tar.bz2
 cd amber24_src
