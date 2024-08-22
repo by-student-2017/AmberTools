@@ -678,6 +678,7 @@ netcdf 4.9.2-1
 - [ATT1] https://amber.tkanai-lab.org/TutorialB4/index.htm, https://www.tkanai-lab.org/wp/wp-content/uploads/2017/09/antechmber-jp.pdf (Japanese)
 - [ATT2] https://oosakik.hatenablog.com/entry/2019/11/19/144858
 - [ATT3] https://amberhub.chpc.utah.edu/tutorials/
+- [ATT4] https://mmtsb.org/workshops/mmtsb-ctbp_workshop_2009/Tutorials/Antechamber_sustiva/antechamber.html
 - [oeante] https://github.com/choderalab/oeante
 - [acpype] https://github.com/alanwilter/acpype
 - [WC1] http://jswails.wikidot.com/windows-cygwin
