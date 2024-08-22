@@ -603,6 +603,39 @@ make test
 ## Ambermini [AM1]
 
 
+## Antechamber (1.0 - 1.27)
+```
+wget https://ambermd.org/antechamber/antechamber-1.27.tar.gz
+```
+```
+wget https://ambermd.org/antechamber/antechamber-1.26.tar.gz
+```
+```
+wget https://ambermd.org/antechamber/antechamber-1.25.tar.gz
+```
+```
+wget https://ambermd.org/antechamber/antechamber-1.24.tar.gz
+```
+```
+wget https://ambermd.org/antechamber/antechamber-1.23.tar.gz
+```
+```
+wget https://ambermd.org/antechamber/antechamber-1.22.tar.gz
+```
+```
+wget https://ambermd.org/antechamber/antechamber-1.21.tar.gz
+```
+```
+wget https://ambermd.org/antechamber/antechamber-1.2.tar.gz
+```
+```
+wget https://ambermd.org/antechamber/antechamber-1.1.tar.gz
+```
+```
+wget https://ambermd.org/antechamber/antechamber-1.0.tar.gz
+```
+
+
 ## sci-AmberTools (sci-ambertools)
 ```
 wget https://gitweb-cdn-origin.gentoo.org/proj/sci.git/snapshot/sci-ambertools.tar.bz2
