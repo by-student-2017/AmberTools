@@ -601,9 +601,6 @@ make test
 
 
 ## Ambermini [AM1]
-```
-
-```
 
 
 ## sci-AmberTools (sci-ambertools)
@@ -680,11 +677,14 @@ netcdf 4.9.2-1
 - [AT17I1] https://www.computabio.com/compilation-tutorial-of-ambertools17-under-windows.html (export AMBERHOME='pwd'; ./configure -cygwin -noX11 gnu; source amber.sh; make install)
 - [AT15I1] https://topic.alibabacloud.com/a/summary-of-accelerated-installation-of-amber11--ambertools15--cuda_1_16_32529945.html
 - [AT13I1] http://jswails.wikidot.com/installing-amber12-and-ambertools-13
+- [AT12] https://ambermd.org/antechamber/antechamber.html
 - [TU1] https://amber.tkanai-lab.org/ (Japanese)
 - [ATT1] https://amber.tkanai-lab.org/TutorialB4/index.htm, https://www.tkanai-lab.org/wp/wp-content/uploads/2017/09/antechmber-jp.pdf (Japanese)
 - [ATT2] https://oosakik.hatenablog.com/entry/2019/11/19/144858
 - [ATT3] https://amberhub.chpc.utah.edu/tutorials/
 - [ATT4] https://mmtsb.org/workshops/mmtsb-ctbp_workshop_2009/Tutorials/Antechamber_sustiva/antechamber.html
+- [ATT5] https://computecanada.github.io/molmodsim-amber-md-lesson/
+- [ATT6] https://emleddin.github.io/comp-chem-website/AMBERguide-antechamber.html
 - [oeante] https://github.com/choderalab/oeante
 - [acpype] https://github.com/alanwilter/acpype
 - [PolyParGen] http://polypargen.com/
