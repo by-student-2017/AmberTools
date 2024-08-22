@@ -600,6 +600,12 @@ make test
 ```
 
 
+## Ambermini [AM1]
+```
+
+```
+
+
 ## sci-AmberTools (sci-ambertools)
 ```
 wget https://gitweb-cdn-origin.gentoo.org/proj/sci.git/snapshot/sci-ambertools.tar.bz2
@@ -682,6 +688,7 @@ netcdf 4.9.2-1
 - [oeante] https://github.com/choderalab/oeante
 - [acpype] https://github.com/alanwilter/acpype
 - [PolyParGen] http://polypargen.com/
+- [AM1] https://github.com/choderalab/ambermini/tree/master?tab=readme-ov-file
 - [WC1] http://jswails.wikidot.com/windows-cygwin
 - [CWM1] https://github.com/X-Ability/CygwinWM/
 - [f2f.pl] https://github.com/mgaitan/f2f_online/blob/master/lib/f2f.pl
