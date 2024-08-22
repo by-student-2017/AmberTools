@@ -681,6 +681,7 @@ netcdf 4.9.2-1
 - [ATT4] https://mmtsb.org/workshops/mmtsb-ctbp_workshop_2009/Tutorials/Antechamber_sustiva/antechamber.html
 - [oeante] https://github.com/choderalab/oeante
 - [acpype] https://github.com/alanwilter/acpype
+- [PolyParGen] http://polypargen.com/
 - [WC1] http://jswails.wikidot.com/windows-cygwin
 - [CWM1] https://github.com/X-Ability/CygwinWM/
 - [f2f.pl] https://github.com/mgaitan/f2f_online/blob/master/lib/f2f.pl
