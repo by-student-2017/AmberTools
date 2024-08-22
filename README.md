@@ -198,7 +198,7 @@ wget https://ambermd.org/downloads/AmberTools23_rc6.tar.bz2
 - Not use MPI, GPU, GUI, Quick, python, and miniconda
 - This is a very simple executable file with few dependencies, suitable for basic functionality. It has also passed testing.
 ```
-tar xvf AmberTools23jlmrcc.tar.bz2
+tar xvf AmberTools23_rc6.tar.bz2
 cd amber22_src
 ./update_amber --check-updates
 ./update_amber --update
@@ -226,7 +226,7 @@ make test.serial && make clean.test
 - Not use GUI, GPU, and Quick
 - [-- Found PythonLibs: /home/inukai/miniconda3/lib/libpython3.10.so (found suitable exact version "3.10.14")] (If miniconda3 is not installed, set "-DDOWNLOAD_MINICONDA=TRUE".)
 ```
-tar xvf AmberTools23jlmrcc.tar.bz2
+tar xvf AmberTools23_rc6.tar.bz2
 cd amber22_src
 ./update_amber --check-updates
 ./update_amber --update
