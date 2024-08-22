@@ -1,0 +1,86 @@
+#--------------------------------------------------------------------------------------------------------------------------------------
+# AmberTools24, Installation (Ubuntu 22.04 LTS (or WSL2), cmake, python, quick)
+#--------------------------------------------------------------------------------------------------------------------------------------
+# Ubuntu 22.04 LTS (related packages)
+
+sudo apt update
+sudo apt -y install tcsh make gcc gfortran flex bison patch bc wget xorg-dev libz-dev libbz2-dev build-essential libopenblas-dev libarpack2-dev libnetcdf-dev libnetcdff-dev
+sudo apt -y install openmpi-bin libopenmpi-dev openssh-client python3-mpi4py python3-numpy python3-setuptools
+sudo apt -y install swig octave-dev guile-3.0-dev libprotobuf-dev libperl-dev netcdf-bin
+
+#--------------------------------------------------------------------------------------------------------------------------------------
+# PLUMED (Installation and environment settings)
+
+wget https://github.com/plumed/plumed2/releases/download/v2.9.0/plumed-2.9.0.tgz
+tar zxvf plumed-2.9.0.tgz
+cd plumed-2.9.0
+./configure --prefix=/mnt/d/plumed-2.9.0/opt
+make
+make install
+
+echo '# PLUMED, Environment settings' >> ~/.bashrc
+echo 'export PATH=$PATH:/mnt/d/plumed-2.9.0/opt/bin' >> ~/.bashrc
+echo 'export PATH=$PATH:/mnt/d/plumed-2.9.0/opt/lib' >> ~/.bashrc
+echo 'export PATH=$PATH:/mnt/d/plumed-2.9.0/opt/include' >> ~/.bashrc
+echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/mnt/d/plumed-2.9.0/src/lib' >> ~/.bashrc
+bash
+
+#--------------------------------------------------------------------------------------------------------------------------------------
+# AmberTools23 (Installation and environment settings)
+
+wget https://ambermd.org/downloads/AmberTools23_rc6.tar.bz2
+
+tar xvf AmberTools23_rc6.tar.bz2
+cd amber22_src
+./update_amber --check-updates
+./update_amber --update
+cd build
+AMBER_PREFIX=$(dirname $(dirname `pwd`))
+mkdir build_parallel && cd build_parallel
+cmake $AMBER_PREFIX/amber22_src -DCMAKE_INSTALL_PREFIX=$AMBER_PREFIX/amber22 -DCOMPILER=GNU -DMPI=TRUE -DOPENMP=TRUE -DCUDA=FALSE -DNCCL=FALSE -DBLA_VENDOR=OpenBLAS -DBUILD_GUI=FALSE -DBUILD_QUICK=TRUE -DINSTALL_TESTS=TRUE -DBUILD_PYTHON=FALSE -DDOWNLOAD_MINICONDA=FALSE -Wno-dev 2>&1 | tee cmake.log
+make -j4 && make install
+
+source $AMBER_PREFIX/amber22/amber.sh
+echo "# Ambertools23 (amber22) environment settings" >> ~/.bashrc
+echo "source $AMBERHOME/amber.sh" >> ~/.bashrc
+echo 'export PATH=$PATH:'"$AMBERHOME/bin" >> ~/.bashrc
+echo 'export PATH=$PATH:'"$AMBERHOME/lib" >> ~/.bashrc
+echo 'export PATH=$PATH:'"$AMBERHOME/include" >> ~/.bashrc
+echo 'export PATH=$PATH:'"$AMBERHOME/dat" >> ~/.bashrc
+bash
+
+#--------------------------------------------------------------------------------------------------------------------------------------
+# test (about 3 hours): This takes a very long time so I don't recommend it.
+
+cd $AMBERHOME/test
+make test.serial && make clean.test
+
+export DO_PARALLEL="mpirun -np 8"
+make test.parallel.4proc && make clean.test
+unset DO_PARALLEL
+
+#--------------------------------------------------------------------------------------------------------------------------------------
+# Feature of Ambertools24
+
+Note: sqm (=semi-empirical quantum chemistry): MNDO, MNDO/d (=MNDOD), AM1 (AM1, AM1-D* or AM1-DH+), AM1/d (=AM1D), PM3, PDDG/PM3, PDDG/MNDO, RM1, PM3CARB1, PM3-MAIS, PM6 (PM6, PM6-D, or PM6-DH+), DFTB2 (mio-1-1), DFTB3 (3ob-3-1)
+Note: quick (QUantum Interaction Computational Kernel) ab initio quantum chemistry): HF, UHF, DFT (LDA, GGA, Hybrid-GGA, e.g., e B3LYP/cc-pVDZ), UDFT, vdW (Grimme)
+Note: DFT (of quick) = B3LYP, PBE0, D3MBJ, etc DFT = BLYP, B3LYP, BP86, B97, B
+Note: BASIS (of quick) = 6-31G**, cc-pVTZ, aug-cc-pVTZ, def2-TZVP, etc
+Note: sander (Simulated Annealing with NMR-Derived Energy Restraints)
+Note: Mechanical and electrostatic embedding: AMBER/QM, QM = ADF, Gaussian, Orca, Q-Chem, TeraChem, QUICK, MRCC, or Fireball
+Note: Mechanical embedding: ADF, GAMESS-US, NWChem
+Note: sebomd (Semi-Empirical Born-Oppenheimer Molecular Dynamics): NDDO (=AN1, PM3, RM1, etc)
+
+#--------------------------------------------------------------------------------------------------------------------------------------
+# PC specs used for test
+
+OS: Microsoft Windows 11 Home 64 bit
+BIOS: 1.14.0
+CPU： 12th Gen Intel(R) Core(TM) i7-12700
+Base Board：0R6PCT (A01)
+Memory：32 GB
+GPU: NVIDIA GeForce RTX3070
+WSL2: VERSION="22.04.1 LTS (Jammy Jellyfish)"
+Python 3.10.12
+
+#--------------------------------------------------------------------------------------------------------------------------------------
