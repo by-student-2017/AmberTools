@@ -52,7 +52,7 @@ bash
 
 #--------------------------------------------------------------------------------------------------------------------------------------
 # test (about 3 hours): This takes a very long time so I don't recommend it.
-(Start 21/Aug/2024 17:42 - End 21/Aug/2024 ???)
+(Start 21/Aug/2024 17:42 - End 21/Aug/2024 18:27 ?)
 
 cd $AMBERHOME/test
 make test.serial && make clean.test
